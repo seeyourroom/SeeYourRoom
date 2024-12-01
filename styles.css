@@ -8,6 +8,8 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-top: 60px;
 }
 
 header {
@@ -50,14 +52,19 @@ nav a {
     color: #333;
     text-decoration: none;
     font-size: 1rem;
+    padding: 5px 10px;
 }
 
 nav a:hover {
     color: #007bff;
 }
 
+.main-menu {
+    margin-top: 20px;
+}
+
 .hero {
-    background: url('images/works/auto.jpg') no-repeat center center/cover;
+    background: url('images/works/building.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -65,7 +72,6 @@ nav a:hover {
     text-align: center;
     color: #fff;
     padding: 20px;
-    margin-top: 60px;
 }
 
 .hero-overlay {
@@ -129,32 +135,27 @@ nav a:hover {
 }
 
 .service-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .service-item .price {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #007bff;
-    font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
-.service-item .service-list {
+.service-item ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    line-height: 1.4;
+    margin-bottom: 1rem;
 }
 
-.service-item .service-list li {
-    margin-bottom: 5px;
+.service-item ul li {
+    margin-bottom: 0.5rem;
 }
 
 .service-item a {
-    display: inline-block;
-    margin-top: 10px;
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
@@ -164,26 +165,120 @@ nav a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .service-item {
-        width: 100%;
-        margin: 20px 0;
-    }
+.portfolio {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
 
-    .hero h1 {
-        font-size: 2rem;
-    }
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
 
-    .hero p {
-        font-size: 1rem;
-    }
+.portfolio-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px 1%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-item a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.team {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-member {
+    display: inline-block;
+    width: calc(30% - 20px);
+    margin: 10px 1%;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.team-member p {
+    color: #777;
+}
+
+.workflow {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.workflow h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.workflow-step {
+    display: inline-block;
+    width: calc(30% - 20px);
+    margin: 10px 1%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workflow-step img {
+    width: 100%;
+    height: auto;
+}
+
+.workflow-step h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.workflow-step p {
+    padding: 10px;
+    color: #555;
 }
 
 footer {
-    padding: 20px;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
 }
 
 footer a {
