@@ -167,7 +167,7 @@ nav a:hover {
 
 .portfolio {
     padding: 60px 20px;
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
@@ -177,28 +177,58 @@ nav a:hover {
 }
 
 .portfolio-item {
-    display: inline-block;
-    width: 30%;
-    margin: 10px 1%;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
     display: block;
+    transition: opacity 0.3s;
 }
 
-.portfolio-item a {
-    display: block;
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover img {
+    opacity: 0.8;
+}
+
+.portfolio-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 123, 255, 0.8);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
     text-decoration: none;
-    color: #007bff;
-    padding: 10px 0;
+    font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-link {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.portfolio-link:hover {
+    background-color: #0056b3;
 }
 
 .team {
