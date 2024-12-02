@@ -167,7 +167,7 @@ nav a:hover {
 
 .portfolio {
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -176,59 +176,61 @@ nav a:hover {
     margin-bottom: 1.5rem;
 }
 
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 .portfolio-item {
-    display: block;
-    width: 100%;
-    margin: 20px 0;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(45% - 20px);
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    position: relative;
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
+    padding: 15px;
+    position: relative;
 }
 
 .portfolio-item img {
     width: 100%;
     height: auto;
-    display: block;
-    transition: opacity 0.3s;
+    border-radius: 10px;
 }
 
-.portfolio-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-.portfolio-item:hover img {
-    opacity: 0.8;
+.portfolio-item p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
 }
 
 .portfolio-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 123, 255, 0.8);
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
     color: #fff;
-    padding: 15px 30px;
-    border-radius: 8px;
     text-decoration: none;
-    font-size: 1.2rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    opacity: 0;
-}
-
-.portfolio-item:hover .portfolio-link {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.05);
 }
 
 .portfolio-link:hover {
     background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        width: 100%;
+    }
 }
 
 .team {
