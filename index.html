@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to seeYourRoom</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <link href="https://fonts.cdnfonts.com/css/switzer" rel="stylesheet">
     <style>
         body {
@@ -12,38 +12,21 @@
             font-family: 'Switzer', sans-serif;
             color: #333;
             background-color: #f4f4f9;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         header {
             background-color: #ffffff;
             padding: 10px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             position: relative;
         }
         .logo {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
             width: 150px;
             height: auto;
-        }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
-        .menu-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #333;
-            margin: 5px 0;
-            transition: all 0.3s;
         }
         .main-menu {
             display: flex;
@@ -70,22 +53,50 @@
         .main-menu a:hover {
             background-color: #e2e2e2;
         }
-        .hero {
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: #333;
+            border-radius: 3px;
+        }
+        .hero, .page2, .page3 {
             position: relative;
-            background: url('images/works/building.jpg') center/cover no-repeat;
             height: 100vh;
             color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            background-size: cover;
+            background-attachment: fixed;
         }
-        .hero-overlay {
+        .hero {
+            background: url('images/works/building.jpg') center/cover no-repeat;
+        }
+        .page2 {
+            background: url('images/works/auto.jpg') center/cover no-repeat;
+        }
+        .page3 {
+            background: url('images/works/kitchen.jpg') center/cover no-repeat;
+        }
+        .hero-overlay, .page-overlay {
             background: rgba(0, 0, 0, 0.5);
             padding: 50px;
             border-radius: 10px;
         }
-        .hero h1 {
+        .hero h1, .page2 h1, .page3 h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
         }
@@ -104,7 +115,7 @@
         }
         @media screen and (max-width: 768px) {
             .menu-toggle {
-                display: block;
+                display: flex;
             }
             .main-menu {
                 display: none;
@@ -127,7 +138,7 @@
                 text-align: center;
                 padding: 10px 0;
             }
-            .hero h1 {
+            .hero h1, .page2 h1, .page3 h1 {
                 font-size: 2rem;
             }
             .cta-button {
@@ -140,27 +151,39 @@
 <body>
 <header>
     <img class="logo" src="images/logo/logo.png" alt="seeYourRoom Logo">
-    <nav class="main-menu">
-        <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#workflow">Workflow</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <button class="menu-toggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
     </button>
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#page1">Page 1</a></li>
+            <li><a href="#page2">Page 2</a></li>
+            <li><a href="#page3">Page 3</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="page1">
     <div class="hero-overlay">
         <h1>Ideas That Inspire Your Space</h1>
-        <a href="#contact" class="cta-button">Book a Free Consultation</a>
+        <a href="#page2" class="cta-button">Explore More</a>
+    </div>
+</section>
+
+<section class="page2" id="page2">
+    <div class="page-overlay">
+        <h1>Our Vision for Your Home</h1>
+        <a href="#page3" class="cta-button">See Our Work</a>
+    </div>
+</section>
+
+<section class="page3" id="page3">
+    <div class="page-overlay">
+        <h1>Transforming Spaces</h1>
+        <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
 </section>
 
