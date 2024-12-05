@@ -20,19 +20,23 @@
             padding: 10px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             position: relative;
+            flex-wrap: wrap;
         }
         .logo {
             width: 150px;
             height: auto;
+            position: absolute;
+            left: 20px;
         }
         .main-menu {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 30px;
+            width: 100%;
         }
         .main-menu ul {
             display: flex;
@@ -63,6 +67,8 @@
             border: none;
             cursor: pointer;
             padding: 0;
+            position: absolute;
+            right: 20px;
         }
         .menu-toggle span {
             display: block;
@@ -70,6 +76,18 @@
             height: 3px;
             background: #333;
             border-radius: 3px;
+            transition: all 0.3s;
+        }
+        .menu-toggle.open span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 8px;
+        }
+        .menu-toggle.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.open span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: -8px;
         }
         .hero, .page2, .page3 {
             position: relative;
