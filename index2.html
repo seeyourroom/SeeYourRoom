@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Architectural Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <img class="logo" src="images/logo/logo.png" alt="Logo">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="hamburger-icon"></span>
+        </button>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#workflow">Flow of Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Ideas That Inspire</h1>
+        <a href="#contact" class="cta-button">Book a Free Consultation</a>
+    </div>
+</section>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.main-menu').classList.toggle('active');
+    });
+</script>
+</body>
+</html>
