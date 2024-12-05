@@ -14,13 +14,18 @@
         }
         header {
             background-color: #ffffff;
-            padding: 20px 40px;
+            padding: 10px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            position: relative;
         }
         .logo {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 150px;
             height: auto;
         }
@@ -41,6 +46,8 @@
         }
         .main-menu {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 30px;
         }
         .main-menu ul {
@@ -132,11 +139,6 @@
 <body>
 <header>
     <img class="logo" src="images/logo/logo.png" alt="seeYourRoom Logo">
-    <button class="menu-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
     <nav class="main-menu">
         <ul>
             <li><a href="#about">About Us</a></li>
@@ -147,6 +149,11 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
 
 <section class="hero">
