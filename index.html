@@ -164,6 +164,203 @@
                 padding: 12px 25px;
             }
         }
+
+
+
+
+
+
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-card .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #666;
+        }
+
+        .service-card ul li {
+            margin: 5px 0;
+        }
+
+
+
+        .team {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .team h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        /* Team Members Container */
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Individual Team Member */
+        .team-member {
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #ffffff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Profile Card */
+        .profile-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 160px; /* Increased size for better observation */
+            height: 160px; /* Increased size for better observation */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid #ddd;
+        }
+
+        .profile-details {
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .position {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-bottom: 10px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color: #0073b1;
+            border: 1px solid #0073b1;
+            border-radius: 4px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: #0073b1;
+            color: #fff;
+        }
+
+        /* Hover Overlay */
+        .hover-overlay {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .contact-button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #0073b1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #005f8e;
+        }
+
+        /* Show Overlay on Hover */
+        .team-member:hover .hover-overlay {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-members {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 90%;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -193,15 +390,96 @@
 
 <section class="page2" id="page2">
     <div class="page-overlay">
-        <h1>Our Vision for Your Home</h1>
-        <a href="#page3" class="cta-button">See Our Work</a>
+        <div class="services-container">
+            <div class="service-card">
+                <h2>3D Modelling of Buildings/Architecture</h2>
+                <p class="price">Starting Price: $150</p>
+                <h3>Details:</h3>
+                <ul>
+                    <li>Detailed 3D model</li>
+                    <li>Professional texturing</li>
+                    <li>Organized files</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h2>Interior Visualization</h2>
+                <p class="price">Starting Price: $250</p>
+                <h3>Details:</h3>
+                <ul>
+                    <li>Customized scenes</li>
+                    <li>Expert lighting</li>
+                    <li>High-quality renders</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h2>Exterior Visualization</h2>
+                <p class="price">Starting Price: $500</p>
+                <h3>Details:</h3>
+                <ul>
+                    <li>Exterior modeling</li>
+                    <li>Precise texturing</li>
+                    <li>High-definition renders</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="page3" id="page3">
     <div class="page-overlay">
-        <h1>Transforming Spaces</h1>
-        <a href="#contact" class="cta-button">Get in Touch</a>
+        <section class="team">
+            <h2>Meet Our Design Experts</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="profile-card">
+                        <img src="images/avatar/1.jpg" alt="Oleh" class="profile-image">
+                        <div class="profile-details">
+                            <h3 class="name">Oleh</h3>
+                            <p class="position">CO/PM</p>
+                            <p class="bio">Experienced project manager and design strategist with a focus on seamless project execution and creative innovation.</p>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/oleh" target="_blank" class="social-icon">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="hover-overlay">
+                            <button class="contact-button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="profile-card">
+                        <img src="images/avatar/2.jpg" alt="Kateryna" class="profile-image">
+                        <div class="profile-details">
+                            <h3 class="name">Kateryna</h3>
+                            <p class="position">QA/3D Visualizer</p>
+                            <p class="bio">Skilled 3D visualizer and QA specialist known for precision, attention to detail, and delivering high-quality visuals.</p>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/kateryna" target="_blank" class="social-icon">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="hover-overlay">
+                            <button class="contact-button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="profile-card">
+                        <img src="images/avatar/3.jpg" alt="Vasul" class="profile-image">
+                        <div class="profile-details">
+                            <h3 class="name">Vasul</h3>
+                            <p class="position">3D Visualizer</p>
+                            <p class="bio">Creative 3D visualizer with a keen eye for aesthetics and a passion for bringing designs to life through immersive renderings.</p>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/in/vasul" target="_blank" class="social-icon">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="hover-overlay">
+                            <button class="contact-button">Contact</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </section>
 
