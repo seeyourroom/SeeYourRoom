@@ -3,32 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Architectural Services</title>
+    <title>Welcome to seeYourRoom</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+        .main-menu {
+            display: flex;
+            gap: 30px;
+        }
+        .main-menu ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .main-menu li {
+            font-size: 18px;
+        }
+        .main-menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .main-menu a:hover {
+            background-color: #e2e2e2;
+        }
+        .hero {
+            position: relative;
+            background: url('images/interior-hero.jpg') center/cover no-repeat;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .main-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #ffffff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .main-menu.active {
+                display: flex;
+            }
+            .main-menu ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            .main-menu li {
+                text-align: center;
+                padding: 10px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .cta-button {
+                font-size: 0.9rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
-    <div class="header-content">
-        <img class="logo" src="images/logo/logo.png" alt="Logo">
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <span class="hamburger-icon"></span>
-        </button>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#workflow">Flow of Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+    <img class="logo" src="images/logo/logo.png" alt="seeYourRoom Logo">
+    <button class="menu-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#workflow">Workflow</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <section class="hero">
     <div class="hero-overlay">
-        <h1>Ideas That Inspire</h1>
+        <h1>Ideas That Inspire Your Space</h1>
         <a href="#contact" class="cta-button">Book a Free Consultation</a>
     </div>
 </section>
@@ -36,6 +159,7 @@
 <script>
     document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.querySelector('.main-menu').classList.toggle('active');
+        this.classList.toggle('open');
     });
 </script>
 </body>
