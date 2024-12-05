@@ -105,66 +105,75 @@ nav a:hover {
     background-color: #0056b3;
 }
 
-.services {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+
+
+
+
+
+
+
+
+
+/*Service block start*/
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.service-item {
-    display: inline-block;
-    width: calc(45% - 20px);
-    margin: 20px 10px;
-    background: #fff;
+.service-card {
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
     padding: 20px;
-    position: relative;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.service-item:hover {
+.service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.service-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.service-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.service-item .price {
-    font-size: 1.2rem;
-    color: #007bff;
-    margin-bottom: 1rem;
+.service-card .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 15px;
 }
 
-.service-item ul {
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.service-card ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 1rem;
+    margin: 0;
+    color: #666;
 }
 
-.service-item ul li {
-    margin-bottom: 0.5rem;
+.service-card ul li {
+    margin: 5px 0;
 }
 
-.service-item a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.service-item a:hover {
-    text-decoration: underline;
-}
+/*Service block end*/
+
+
+
+
+
+
 
 
 .wide-block {
