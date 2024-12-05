@@ -66,7 +66,7 @@ nav a:hover {
 
 .hero {
     background: url('images/works/building.jpg') no-repeat center center/cover;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,67 +166,108 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.portfolio {
-    padding: 60px 20px;
-    background-color: #fff;
-    text-align: center;
-}
 
-.portfolio h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
 
-.portfolio-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.portfolio-item {
-    width: calc(45% - 20px);
-    background-color: #f9f9f9;
+.wide-block {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
     overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
-    padding: 15px;
-    position: relative;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s, box-shadow 0.5s;
 }
-
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.wide-block:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.portfolio-item h3 {
-    font-size: 1.5rem;
-    margin: 10px 0;
+.wide-block h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
-.portfolio-item p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #666;
+.wide-block p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
 }
-
-.portfolio-link {
+.btn-view-works {
     display: inline-block;
-    padding: 8px 15px;
-    background-color: #007bff;
-    color: #fff;
+    background: linear-gradient(135deg, #f0e4d7, #d6cfc7);
+    color: #333;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 10px;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #b0a59d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-family: 'Georgia', serif; /* Elegant font */
+}
+.btn-view-works::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #b0a59d;
+    opacity: 0.3;
+    background: url('https://www.transparenttextures.com/patterns/linen.png'); /* Subtle pattern */
+    z-index: -1;
+}
+.btn-view-works:hover {
+    background: linear-gradient(135deg, #e3d8c2, #c2b8a3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+.btn-view-works:active {
+    transform: scale(1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-view-works:hover::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+    pointer-events: none;
+}
+.btn-view-works:active::after {
+    width: 300px;
+    height: 300px;
+    transition: none;
+}
+/* Subtle glow effect */
+.wide-block h2:hover {
+    text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.5);
+}
+/* Parallax Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #a0c4ff, #ffdde1);
+    z-index: -1;
+    transform: translateZ(-2px) scale(3);
+    will-change: transform;
 }
 
-.portfolio-link:hover {
-    background-color: #0056b3;
-}
 
 @media (max-width: 768px) {
     .portfolio-item {
@@ -235,7 +276,6 @@ nav a:hover {
 }
 
 .team {
-    padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -269,7 +309,6 @@ nav a:hover {
 }
 
 .workflow {
-    padding: 60px 20px;
     background-color: #ffffff;
     text-align: center;
 }
