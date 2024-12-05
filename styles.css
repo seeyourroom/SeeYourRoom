@@ -413,39 +413,50 @@ nav a:hover {
 
 
 
-.workflow {
+/*///Work floww block start */
+.workflow-container {
     background-color: #ffffff;
-    text-align: center;
-}
-
-.workflow h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.workflow-step {
-    display: inline-block;
-    width: calc(30% - 20px);
-    margin: 10px 1%;
-    border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.workflow-step img {
+    border-radius: 8px;
+    padding: 20px;
     width: 100%;
-    height: auto;
+    max-width: 1200px;
 }
-
-.workflow-step h3 {
-    margin-top: 10px;
-    font-size: 1.2rem;
+h1 {
+    text-align: center;
+    color: #333;
 }
-
-.workflow-step p {
-    padding: 10px;
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
     color: #555;
+    font-size: 16px;
 }
+li:last-child {
+    border-bottom: none;
+}
+li::before {
+    content: '\2022';
+    color: #3b82f6;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+}
+@media (max-width: 600px) {
+    .workflow-container {
+        width: 100%;
+        padding: 15px;
+    }
+}
+/*///Work floww block end */
+
+
+
 
 footer {
     background-color: #333;
