@@ -116,6 +116,7 @@ nav a:hover {
 
 /*Service block start*/
 .services-container {
+    padding-top:20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
