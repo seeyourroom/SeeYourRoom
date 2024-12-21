@@ -504,11 +504,10 @@ button {
 }
 
 .services_box {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border: 1px solid #e0e0e0;
+    background-color: #fff; /* White background */
     border-radius: 8px;
-    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -520,10 +519,15 @@ button {
     transform: scale(1.05);
 }
 
-.services_icon img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+.services_image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service_content {
+    padding: 20px;
+    text-align: center;
 }
 
 .service_title {
@@ -534,8 +538,27 @@ button {
 
 .service_price {
     font-size: 1.25rem;
-    color: #e67e22;
     margin-bottom: 20px;
+    position: relative;
+}
+
+.service_price span {
+    color: #e67e22; /* Price color */
+}
+
+.buy_button {
+    background-color: #e67e22; /* Attractive color for the button */
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy_button:hover {
+    background-color: #d35400; /* Darker button on hover */
 }
 
 .service_description {
@@ -544,18 +567,32 @@ button {
 }
 
 .service_description ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .service_description li {
     margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+.service_description .icon {
+    margin-right: 10px;
+    color: #e67e22;
+    font-size: 1.25rem;
+}
+
+.service_description li:hover {
+    color: #f39c12;
 }
 
 @media (max-width: 768px) {
     .services_box {
-        padding: 20px;
+        padding: 15px;
     }
 
     .service_title {
@@ -564,6 +601,11 @@ button {
 
     .service_price {
         font-size: 1rem;
+    }
+
+    .buy_button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 
     .service_description ul li {
@@ -596,6 +638,11 @@ button {
 
     .service_price {
         font-size: 1.3rem;
+    }
+
+    .buy_button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
     }
 }
 
