@@ -1140,19 +1140,20 @@ input.address_text::placeholder {
 
 /*///Service*/
 
-
 .services_section {
-    width: 100%;
-    float: left;
+    padding: 50px 0;
+    background-color: #FFFFFF;
 }
 
-.services_taital {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #252525;
-    text-align: center;
+.services_title {
+    font-size: 2.5rem;
     font-weight: bold;
+    text-align: center;
+    color: #333333;
+}
+
+.highlight {
+    color: #F8F8F8;
 }
 
 .services_section_2 {
@@ -1162,52 +1163,23 @@ input.address_text::placeholder {
 }
 
 .services_box {
-    width: 100%;
-    float: left;
-    padding: 40px;
-    border-radius: 20px;
-}
-
-
-
-.services_icon {
-    width: 100%;
-    text-align: center;
-    min-height: 92px;
-}
-
-.services_section {
-                      padding: 50px 0;
-                      background-color: #FFFFFF; /* Pure White background for the section */
-                  }
-
-.services_title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: #333333; /* Dark gray text for contrast */
-}
-
-.highlight {
-    color: #F8F8F8; /* Off-White for highlighting */
-}
-
-.services_box {
-    background-color: #FFFFFF; /* Ivory color for service boxes */
+    background-color: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Ensure equal height */
+    height: 100%;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow without border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ensures consistent alignment */
+    max-width: 350px; /* Prevent overly large cards */
 }
 
 .services_box:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced hover effect */
-    background-color: #F8F8F8; /* Off-White on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: #F8F8F8;
 }
 
 .services_image {
@@ -1218,9 +1190,9 @@ input.address_text::placeholder {
 
 .service_content {
     padding: 20px;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centers content inside the card */
     justify-content: space-between;
 }
 
@@ -1228,35 +1200,35 @@ input.address_text::placeholder {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #333333; /* Dark gray color for titles */
+    color: #333333;
 }
 
 .service_price {
     font-size: 1.25rem;
     margin-bottom: 20px;
-    position: relative;
     color: #333;
 }
 
 .buy_button {
-    background-color: #F8F8F8; /* Off-White button background */
+    background-color: #F8F8F8;
     color: #333333;
     font-size: 1rem;
     padding: 10px 20px;
-    border: 2px solid #333333; /* Dark border for button */
+    border: 2px solid #333333;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
 .buy_button:hover {
-    background-color: #FFFFFF; /* Pure White on hover */
-    border-color: #FFFFFF; /* Ivory border on hover */
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 
 .service_description {
     font-size: 1rem;
     color: #7f8c8d;
+    text-align: left; /* Aligns the description text */
 }
 
 .service_description ul {
@@ -1267,7 +1239,7 @@ input.address_text::placeholder {
 
 .service_description li {
     margin-bottom: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     display: flex;
     align-items: center;
@@ -1275,17 +1247,70 @@ input.address_text::placeholder {
 
 .service_description .icon {
     margin-right: 10px;
-    color: #333333; /* Dark gray icons */
+    color: #333333;
     font-size: 1.25rem;
 }
 
 .service_description li:hover {
-    color: #333333; /* Dark gray on hover for list items */
+    color: #333333;
 }
+
+.service_description {
+    font-size: 1rem;
+    color: #7f8c8d;
+    text-align: left; /* Aligns the description text */
+}
+
+.service_description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service_description li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(0, 123, 255, 0.05); /* Subtle blue background */
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service_description li:hover {
+    color: #0056b3; /* Accent color on hover */
+    background: rgba(0, 123, 255, 0.1); /* Darker blue background on hover */
+    transform: translateX(5px); /* Subtle movement on hover */
+}
+
+.service_description .icon {
+    margin-right: 15px;
+    color: #007bff; /* Blue color for icons */
+    font-size: 1.25rem; /* Slightly larger icons */
+    transition: transform 0.3s ease;
+}
+
+.service_description .icon:hover {
+    transform: scale(1.2); /* Slightly enlarge icons on hover */
+}
+
+@media (max-width: 768px) {
+    .service_description li {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .service_description .icon {
+        font-size: 1.1rem; /* Adjust icon size for smaller screens */
+    }
+}
+
 
 @media (max-width: 768px) {
     .services_box {
         padding: 15px;
+        max-width: 90%;
     }
 
     .service_title {
@@ -1301,7 +1326,7 @@ input.address_text::placeholder {
         padding: 8px 16px;
     }
 
-    .service_description ul li {
+    .service_description li {
         font-size: 0.9rem;
     }
 }
@@ -1340,6 +1365,6 @@ input.address_text::placeholder {
 
     .row {
         justify-content: center;
-        align-items: stretch; /* Ensures all cards are on the same level */
+        align-items: stretch;
     }
 }
