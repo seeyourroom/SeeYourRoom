@@ -1140,29 +1140,29 @@ input.address_text::placeholder {
 
 /*///Service*/
 
-.services_section {
+.syr_services_section {
     padding: 50px 0;
     background-color: #FFFFFF;
 }
 
-.services_title {
+.syr_services_title {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
     color: #333333;
 }
 
-.highlight {
+.syr_highlight {
     color: #F8F8F8;
 }
 
-.services_section_2 {
+.syr_services_section_2 {
     width: 100%;
     float: left;
     margin-top: 40px;
 }
 
-.services_box {
+.syr_services_box {
     background-color: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
@@ -1173,43 +1173,46 @@ input.address_text::placeholder {
     transition: transform 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center; /* Ensures consistent alignment */
-    max-width: 350px; /* Prevent overly large cards */
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.services_box:hover {
+.syr_services_box:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     background-color: #F8F8F8;
 }
 
-.services_image {
+.syr_services_image {
     height: 200px;
     background-size: cover;
     background-position: center;
 }
 
-.service_content {
+.syr_service_content {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content inside the card */
+    align-items: center;
     justify-content: space-between;
 }
 
-.service_title {
+.syr_service_title {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
     color: #333333;
 }
 
-.service_price {
+.syr_service_price {
     font-size: 1.25rem;
     margin-bottom: 20px;
     color: #333;
 }
 
-.buy_button {
+.syr_buy_button {
     background-color: #F8F8F8;
     color: #333333;
     font-size: 1rem;
@@ -1220,24 +1223,27 @@ input.address_text::placeholder {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.buy_button:hover {
+.syr_buy_button:hover {
     background-color: #FFFFFF;
     border-color: #FFFFFF;
 }
 
-.service_description {
+.syr_service_description {
     font-size: 1rem;
     color: #7f8c8d;
-    text-align: left; /* Aligns the description text */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.service_description ul {
+.syr_service_description ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.service_description li {
+.syr_service_description li {
     margin-bottom: 10px;
     font-size: 1rem;
     line-height: 1.6;
@@ -1245,120 +1251,72 @@ input.address_text::placeholder {
     align-items: center;
 }
 
-.service_description .icon {
+.syr_service_description .syr_icon {
     margin-right: 10px;
     color: #333333;
     font-size: 1.25rem;
 }
 
-.service_description li:hover {
+.syr_service_description li:hover {
     color: #333333;
 }
 
-.service_description {
-    font-size: 1rem;
-    color: #7f8c8d;
-    text-align: left; /* Aligns the description text */
-}
-
-.service_description ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.service_description li {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners */
-    background: rgba(0, 123, 255, 0.05); /* Subtle blue background */
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
-}
-
-.service_description li:hover {
-    color: #0056b3; /* Accent color on hover */
-    background: rgba(0, 123, 255, 0.1); /* Darker blue background on hover */
-    transform: translateX(5px); /* Subtle movement on hover */
-}
-
-.service_description .icon {
-    margin-right: 15px;
-    color: #007bff; /* Blue color for icons */
-    font-size: 1.25rem; /* Slightly larger icons */
-    transition: transform 0.3s ease;
-}
-
-.service_description .icon:hover {
-    transform: scale(1.2); /* Slightly enlarge icons on hover */
-}
-
 @media (max-width: 768px) {
-    .service_description li {
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    .syr_service_description li {
+        font-size: 0.9rem;
     }
 
-    .service_description .icon {
-        font-size: 1.1rem; /* Adjust icon size for smaller screens */
+    .syr_service_description .syr_icon {
+        font-size: 1.1rem;
     }
-}
 
-
-@media (max-width: 768px) {
-    .services_box {
+    .syr_services_box {
         padding: 15px;
         max-width: 90%;
     }
 
-    .service_title {
+    .syr_service_title {
         font-size: 1.3rem;
     }
 
-    .service_price {
+    .syr_service_price {
         font-size: 1rem;
     }
 
-    .buy_button {
+    .syr_buy_button {
         font-size: 0.9rem;
         padding: 8px 16px;
-    }
-
-    .service_description li {
-        font-size: 0.9rem;
     }
 }
 
 @media (min-width: 768px) {
-    .services_box {
+    .syr_services_box {
         padding: 25px;
     }
 
-    .service_title {
+    .syr_service_title {
         font-size: 1.4rem;
     }
 
-    .service_price {
+    .syr_service_price {
         font-size: 1.1rem;
     }
 }
 
 @media (min-width: 1200px) {
-    .services_title {
+    .syr_services_title {
         font-size: 3rem;
     }
 
-    .service_title {
+    .syr_service_title {
         font-size: 1.6rem;
     }
 
-    .service_price {
+    .syr_service_price {
         font-size: 1.3rem;
     }
 
-    .buy_button {
+    .syr_buy_button {
         font-size: 1.1rem;
         padding: 12px 24px;
     }
