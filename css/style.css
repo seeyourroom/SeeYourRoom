@@ -481,178 +481,6 @@ button {
     min-height: 92px;
 }
 
-/* Main Section */
-.services_section {
-    padding: 50px 0;
-    background-color: #FFFFFF; /* Pure White background for the section */
-}
-
-.services_title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333333; /* Dark gray text for contrast */
-}
-
-.highlight {
-    color: #F8F8F8; /* Off-White for highlighting */
-}
-
-.services_box {
-    background-color: #FFFFFF; /* Ivory color for service boxes */
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow without border */
-}
-
-.services_box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced hover effect */
-    background-color: #F8F8F8; /* Off-White on hover */
-}
-
-.services_image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-}
-
-.service_content {
-    padding: 20px;
-    text-align: center;
-}
-
-.service_title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333333; /* Dark gray color for titles */
-}
-
-.service_price {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    position: relative;
-    color: #333;
-}
-
-.buy_button {
-    background-color: #F8F8F8; /* Off-White button background */
-    color: #333333;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: 2px solid #333333; /* Dark border for button */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.buy_button:hover {
-    background-color: #FFFFFF; /* Pure White on hover */
-    border-color: #FFFFFF; /* Ivory border on hover */
-}
-
-.service_description {
-    font-size: 1rem;
-    color: #7f8c8d;
-}
-
-.service_description ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.service_description li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-}
-
-.service_description .icon {
-    margin-right: 10px;
-    color: #333333; /* Dark gray icons */
-    font-size: 1.25rem;
-}
-
-.service_description li:hover {
-    color: #333333; /* Dark gray on hover for list items */
-}
-
-@media (max-width: 768px) {
-    .services_box {
-        padding: 15px;
-    }
-
-    .service_title {
-        font-size: 1.3rem;
-    }
-
-    .service_price {
-        font-size: 1rem;
-    }
-
-    .buy_button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .service_description ul li {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .services_box {
-        padding: 25px;
-    }
-
-    .service_title {
-        font-size: 1.4rem;
-    }
-
-    .service_price {
-        font-size: 1.1rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .services_title {
-        font-size: 3rem;
-    }
-
-    .service_title {
-        font-size: 1.6rem;
-    }
-
-    .service_price {
-        font-size: 1.3rem;
-    }
-
-    .buy_button {
-        font-size: 1.1rem;
-        padding: 12px 24px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .row {
-        justify-content: center;
-    }
-}
-
-
-
-/* services section end */
-
 
 /* gallery section start */
 
@@ -1338,4 +1166,177 @@ input.address_text::placeholder {
 
 .margin_top90 {
     margin-top: 90px;
+}
+
+
+
+/*///Service*/
+
+/* Main Section */.services_section {
+                      padding: 50px 0;
+                      background-color: #FFFFFF; /* Pure White background for the section */
+                  }
+
+.services_title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333333; /* Dark gray text for contrast */
+}
+
+.highlight {
+    color: #F8F8F8; /* Off-White for highlighting */
+}
+
+.services_box {
+    background-color: #FFFFFF; /* Ivory color for service boxes */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure equal height */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow without border */
+}
+
+.services_box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced hover effect */
+    background-color: #F8F8F8; /* Off-White on hover */
+}
+
+.services_image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service_content {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333333; /* Dark gray color for titles */
+}
+
+.service_price {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    position: relative;
+    color: #333;
+}
+
+.buy_button {
+    background-color: #F8F8F8; /* Off-White button background */
+    color: #333333;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #333333; /* Dark border for button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.buy_button:hover {
+    background-color: #FFFFFF; /* Pure White on hover */
+    border-color: #FFFFFF; /* Ivory border on hover */
+}
+
+.service_description {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.service_description ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service_description li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+}
+
+.service_description .icon {
+    margin-right: 10px;
+    color: #333333; /* Dark gray icons */
+    font-size: 1.25rem;
+}
+
+.service_description li:hover {
+    color: #333333; /* Dark gray on hover for list items */
+}
+
+@media (max-width: 768px) {
+    .services_box {
+        padding: 15px;
+    }
+
+    .service_title {
+        font-size: 1.3rem;
+    }
+
+    .service_price {
+        font-size: 1rem;
+    }
+
+    .buy_button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .service_description ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .services_box {
+        padding: 25px;
+    }
+
+    .service_title {
+        font-size: 1.4rem;
+    }
+
+    .service_price {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .services_title {
+        font-size: 3rem;
+    }
+
+    .service_title {
+        font-size: 1.6rem;
+    }
+
+    .service_price {
+        font-size: 1.3rem;
+    }
+
+    .buy_button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+    }
+
+    .row {
+        justify-content: center;
+        align-items: stretch; /* Ensures all cards are on the same level */
+    }
 }
