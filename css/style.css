@@ -231,8 +231,9 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/works/building_adapted.jpg);
+    background-image: url(../images/portfolio/raduga_viz_v01_CShading_LightMix001.jpg);
     height: auto;
+    min-height: 1000px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
