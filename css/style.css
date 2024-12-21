@@ -1174,7 +1174,8 @@ input.address_text::placeholder {
 }
 
 .syr_highlight {
-    color: #F8F8F8;
+    padding-top: 50px;
+    color: #333333;
 }
 
 .syr_services_section_2 {
@@ -1321,6 +1322,7 @@ input.address_text::placeholder {
 
 @media (min-width: 1200px) {
     .syr_services_title {
+        padding-top: 30px;
         font-size: 3rem;
     }
 
