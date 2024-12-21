@@ -236,7 +236,25 @@ button {
     background-repeat: no-repeat;
     background-position: center; /* Centers the background image */
 }
-
+@media only screen and (max-width: 767px) {
+    .header_section {
+        height: 50vh; /* Adjusts the height for smaller screens */
+        background-size: contain; /* Ensures the background image fits within the section */
+    }
+    .navbar {
+        padding: 0.5rem 1rem; /* Adjusts navbar padding for smaller screens */
+    }
+    .navbar-toggler {
+        padding: 0.25rem 0.75rem; /* Adjusts button padding for toggler */
+    }
+    .banner_taital {
+        font-size: 2rem; /* Adjusts font size for smaller screens */
+    }
+    .readmore_bt a {
+        font-size: 1rem; /* Adjusts the button font size for smaller screens */
+        padding: 0.5rem 1rem; /* Adjusts padding for the button */
+    }
+}
 
 .header_bg {
     background: #ffffff;
