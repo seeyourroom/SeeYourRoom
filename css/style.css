@@ -469,18 +469,11 @@ button {
 .services_box {
     width: 100%;
     float: left;
-    border: 2px solid #4f4f4f;
     padding: 40px;
     border-radius: 20px;
 }
 
-.services_box:hover {
-    border: 2px solid #fcc849;
-}
 
-.services_box.active {
-    border: 2px solid #fcc849;
-}
 
 .services_icon {
     width: 100%;
@@ -488,8 +481,10 @@ button {
     min-height: 92px;
 }
 
+/* Main Section */
 .services_section {
     padding: 50px 0;
+    background-color: #FFFFFF; /* Pure White background for the section */
 }
 
 .services_title {
@@ -497,26 +492,29 @@ button {
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
+    color: #333333; /* Dark gray text for contrast */
 }
 
 .highlight {
-    color: #f39c12;
+    color: #F8F8F8; /* Off-White for highlighting */
 }
 
 .services_box {
-    background-color: #fff; /* White background */
+    background-color: #FFFFF0; /* Ivory color for service boxes */
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
     transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow without border */
 }
 
 .services_box:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced hover effect */
+    background-color: #F8F8F8; /* Off-White on hover */
 }
 
 .services_image {
@@ -534,31 +532,30 @@ button {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
+    color: #333333; /* Dark gray color for titles */
 }
 
 .service_price {
     font-size: 1.25rem;
     margin-bottom: 20px;
     position: relative;
-}
-
-.service_price span {
-    color: #e67e22; /* Price color */
+    color: #333;
 }
 
 .buy_button {
-    background-color: #e67e22; /* Attractive color for the button */
-    color: white;
+    background-color: #F8F8F8; /* Off-White button background */
+    color: #333333;
     font-size: 1rem;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #333333; /* Dark border for button */
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .buy_button:hover {
-    background-color: #d35400; /* Darker button on hover */
+    background-color: #FFFFFF; /* Pure White on hover */
+    border-color: #FFFFF0; /* Ivory border on hover */
 }
 
 .service_description {
@@ -582,12 +579,12 @@ button {
 
 .service_description .icon {
     margin-right: 10px;
-    color: #e67e22;
+    color: #333333; /* Dark gray icons */
     font-size: 1.25rem;
 }
 
 .service_description li:hover {
-    color: #f39c12;
+    color: #333333; /* Dark gray on hover for list items */
 }
 
 @media (max-width: 768px) {
