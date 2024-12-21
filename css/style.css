@@ -231,7 +231,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/portfolio/raduga_viz_v01_CShading_LightMix001.jpg);
+    background-image: url(../images/portfolio/main_logo.jpg);
     height: 100vh; /* Adjust height to match the full viewport height */
     background-size: cover; /* Ensures the background covers the entire section */
     background-repeat: no-repeat;
