@@ -551,39 +551,46 @@ button {
     width: 65%;
 }
 
-.portfolio_bt {
-    width: 200px;
-    margin: 20px auto;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.portfolio-button {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    width: 100%;
+    background-color: #F5A623;
+    color: #333333; /* Set text color to #333333 */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 28px;
+    /*font-weight: bold; !* Make text bold for better visibility *!*/
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio_bt a {
-    display: inline-block;
-    background: linear-gradient(135deg, #6c5ce7, #00b894); /* Gradient for a modern touch */
-    color: white;
-    text-decoration: none;
-    padding: 15px 30px;
-    border-radius: 50px; /* Rounded pill shape for a friendly feel */
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+.portfolio-button:hover {
+    background-color: #D87E15;
+    color: #FFFFFF;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
 }
 
-.portfolio_bt a:hover {
-    background: linear-gradient(135deg, #00b894, #6c5ce7); /* Inverse gradient on hover */
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deepens shadow on hover */
+.portfolio-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio_bt a:active {
-    transform: translateY(2px); /* Button "press" effect */
+.button-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
 }
+
+.portfolio-button:hover .button-icon {
+    transform: rotate(15deg);
+}
+
 
 
 
