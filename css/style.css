@@ -581,6 +581,20 @@ button {
     font-weight: bold;
 }
 
+.logo a {
+    font-family: 'Otterco', sans-serif; /* Use the preferred font */
+    font-size: 21px; /* Adjust the font size */
+    font-weight: bold; /* Make it bold to mimic a logo look */
+    color: #333; /* Choose a logo color */
+    text-decoration: none; /* Remove underline from the link */
+    display: inline-block;
+    width: 105px; /* Define the width */
+    height: 21px; /* Define the height */
+    line-height: 21px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+}
+
+
 .ipsum_text {
     color: #ffffff;
     text-align: center;
