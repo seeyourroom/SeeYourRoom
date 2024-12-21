@@ -1183,7 +1183,6 @@ input.address_text::placeholder {
 
 .syr_services_box {
     background-color: #FFFFFF;
-    border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1237,7 +1236,6 @@ input.address_text::placeholder {
     font-size: 1rem;
     padding: 10px 20px;
     border: 2px solid #333333;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
@@ -1309,9 +1307,7 @@ input.address_text::placeholder {
 }
 
 @media (min-width: 768px) {
-    .syr_services_box {
-        padding: 25px;
-    }
+
 
     .syr_service_title {
         font-size: 1.4rem;
