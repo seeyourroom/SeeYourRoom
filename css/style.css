@@ -551,28 +551,40 @@ button {
     width: 65%;
 }
 
-.seemore_bt {
-    width: 170px;
-    margin: 0 auto;
+.portfolio_bt {
+    width: 200px;
+    margin: 20px auto;
     text-align: center;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.seemore_bt a {
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #252525;
-    padding: 10px 0px;
-    margin-top: 40px;
-    border-radius: 40px;
+.portfolio_bt a {
+    display: inline-block;
+    background: linear-gradient(135deg, #6c5ce7, #00b894); /* Gradient for a modern touch */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px; /* Rounded pill shape for a friendly feel */
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.seemore_bt a:hover {
-    background-color: #fcbf2d;
-    color: #ffffff;
+.portfolio_bt a:hover {
+    background: linear-gradient(135deg, #00b894, #6c5ce7); /* Inverse gradient on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deepens shadow on hover */
 }
+
+.portfolio_bt a:active {
+    transform: translateY(2px); /* Button "press" effect */
+}
+
 
 
 /* gallery section end */
