@@ -500,7 +500,7 @@ button {
 }
 
 .services_box {
-    background-color: #FFFFF0; /* Ivory color for service boxes */
+    background-color: #FFFFFF; /* Ivory color for service boxes */
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -555,7 +555,7 @@ button {
 
 .buy_button:hover {
     background-color: #FFFFFF; /* Pure White on hover */
-    border-color: #FFFFF0; /* Ivory border on hover */
+    border-color: #FFFFFF; /* Ivory border on hover */
 }
 
 .service_description {
