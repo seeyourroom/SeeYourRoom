@@ -266,9 +266,29 @@ button {
 }
 
 .logo {
-    width: 17%;
-    float: left;
+    display: flex;
+    align-items: center;
+    width: auto; /* Adjust as needed */
 }
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000; /* Adjust text color as needed */
+}
+
+.logo img {
+    max-height: 50px; /* Adjust based on your logo size */
+    margin-right: 10px; /* Add spacing between the logo and the text */
+}
+
+.logo span {
+    font-size: 1.5em; /* Adjust text size */
+    font-weight: bold;
+    color: inherit;
+}
+
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 30px;
