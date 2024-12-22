@@ -279,7 +279,7 @@ button {
 }
 
 .logo img {
-    max-height: 50px; /* Adjust based on your logo size */
+    max-height: 30px; /* Adjust based on your logo size */
     margin-right: 10px; /* Add spacing between the logo and the text */
 }
 
@@ -404,8 +404,8 @@ button {
     width: 100%;
     padding: 12px 0;
     font-size: 16px;
-    color: #fff;
-    background-color: #fcbf2d; /* Warm gold color for the button */
+    color: #42a294;
+    background-color: #FFFFFF; /* Warm gold color for the button */
     border: none;
     border-radius: 40px; /* Rounded button */
     font-weight: bold;
@@ -415,7 +415,8 @@ button {
 
 /* Hover effect for the button */
 .readmore_bt button:hover {
-    background-color: #0d0c0c; /* Dark color for hover */
+    background-color: #42a294; /* Dark color for hover */
+    color: #FFFFFF;
     transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
@@ -642,22 +643,23 @@ button {
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
     width: 100%;
-    background-color: #D87E15;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #42a294;
     border: none;
     border-radius: 5px;
     padding: 12px 24px;
+    border-color: #56baae;
     font-size: 28px;
     /*font-weight: bold; !* Make text bold for better visibility *!*/
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px #56baae;
 }
 
 .portfolio-button:hover {
 
 
-    background-color: #F5A623;
+    background-color: #56baae;
     color: #FFFFFF; /* Set text color to #333333 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
