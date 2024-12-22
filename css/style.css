@@ -1437,7 +1437,7 @@ input.address_text::placeholder {
 
 /*Contact*/
 .contact_section {
-    padding: 50px 0;
+    padding: 10px 0;
     background-color: #FFFFFF;
 }
 
@@ -1490,8 +1490,62 @@ input.address_text::placeholder {
 .contact_block {
     width: 100%;
     float: left;
-    font-size: 40px;
     color: #1f1f1f;
-    font-weight: bold;
     padding-top: 20px;
+}
+
+
+/*///creator*/
+.creator-section {
+    font-size: 16px;
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+.creator-image img {
+    max-width: 200px;
+    height: auto; /* Maintains aspect ratio */
+    padding: 5px;
+}
+
+.creator-name {
+
+    color: #333;
+    margin-top: 15px;
+}
+
+.creator-description {
+    color: #666;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .creator-section {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        text-align: center; /* Center-align text for better visual hierarchy */
+    }
+
+    .creator-name {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .creator-description {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .creator-name {
+        font-size: 1.2em; /* Further adjust font size for extra small screens */
+    }
+
+    .creator-description {
+        font-size: 0.8em; /* Further adjust font size */
+    }
+
+    .creator-image img {
+        max-width: 250px; /* Adjust image size for extra small screens */
+    }
 }
