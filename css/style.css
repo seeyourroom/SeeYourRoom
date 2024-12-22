@@ -1495,28 +1495,31 @@ input.address_text::placeholder {
 }
 
 
-/*///creator*/
-.creator-section {
-    font-size: 16px;
-    margin-top: 30px;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
-}
+/*///creator*/.creator-section {
+                  margin-top: 30px;
+                  align-items: center;
+                  display: flex;
+                  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+              }
 
 .creator-image img {
-    max-width: 200px;
-    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 300px; /* Constrain height to its natural dimensions */
+    border-radius: 50%; /* Optional: Adds slightly rounded corners */
     padding: 5px;
+    object-fit: contain; /* Ensures the image fits well in the container */
 }
 
 .creator-name {
-
+    font-size: 1.8em;
+    font-weight: bold;
     color: #333;
     margin-top: 15px;
 }
 
 .creator-description {
+    font-size: 1em;
     color: #666;
     margin-top: 10px;
 }
@@ -1525,6 +1528,11 @@ input.address_text::placeholder {
     .creator-section {
         flex-direction: column; /* Stack content vertically on smaller screens */
         text-align: center; /* Center-align text for better visual hierarchy */
+    }
+
+    .creator-image img {
+        max-width: 70%; /* Scale image proportionally for smaller screens */
+        max-height: auto;
     }
 
     .creator-name {
@@ -1546,6 +1554,7 @@ input.address_text::placeholder {
     }
 
     .creator-image img {
-        max-width: 250px; /* Adjust image size for extra small screens */
+        max-width: 100%; /* Scale image to fit container */
+        max-height: auto;
     }
 }
