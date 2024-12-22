@@ -1555,6 +1555,22 @@ input.address_text::placeholder {
 
     .creator-image img {
         max-width: 100%; /* Scale image to fit container */
-        max-height: auto;
     }
+}
+
+
+.creator-description.quote-block {
+    background-color: #f9f9f9; /* Light background for the quote block */
+    border-left: 4px solid #42a294; /* A colored left border for emphasis */
+    padding: 20px 30px;
+    font-style: italic; /* Make the text italic for a quote effect */
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a raised effect */
+}
+
+.creator-description.quote-block p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
 }
