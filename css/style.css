@@ -347,29 +347,64 @@ button {
     text-align: center;
 }
 
-.readmore_bt {
-    width: 170px;
+/* Form container */
+.contact-form {
+    width: 350px; /* Adjust width as needed */
     margin: 0 auto;
-    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff; /* White text color */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    text-align: center; /* Center the contents */
+    backdrop-filter: blur(8px); /* Add a slight blur effect to the background */
 }
 
-.readmore_bt a {
+.contact-form input {
     width: 100%;
-    float: left;
+    padding: 12px 20px;
+    margin: 12px 0;
     font-size: 16px;
-    color: #ffffff;
-    background-color: #fcbf2d;
-    padding: 10px 0px;
-    text-align: center;
-    text-transform: uppercase;
-    border-radius: 40px;
-    font-weight: bold;
+    color: #333; /* Dark text for the input */
+    background-color: #fff; /* White background for input */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border */
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease;
 }
 
-.readmore_bt a:hover {
-    color: #ffffff;
-    background-color: #0d0c0c;
+/* Focus effect for the input */
+.contact-form input:focus {
+    border-color: #fcbf2d; /* Highlight with a gold color */
+    outline: none;
 }
+
+/* Button styling */
+.readmore_bt button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #fcbf2d; /* Warm gold color for the button */
+    border: none;
+    border-radius: 40px; /* Rounded button */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the button */
+.readmore_bt button:hover {
+    background-color: #0d0c0c; /* Dark color for hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Optional styling for form input placeholder text */
+.contact-form input::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+}
+
+
 
 #main_slider a.carousel-control-prev {
     position: absolute;
