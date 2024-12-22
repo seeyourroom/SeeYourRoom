@@ -65,8 +65,8 @@
                               <div class="banner_taital_main">
 
                                  <div class="contact-form">
-                                    <form action="your-action-url" method="POST">
-                                       <input type="email" name="email" placeholder="Enter your email" required>
+                                    <form id="contactForm">
+                                       <input type="email" id="userEmail" name="email" placeholder="Enter your email" required>
                                        <div class="readmore_bt">
                                           <button type="submit">Get In Touch</button>
                                        </div>
@@ -370,3 +370,36 @@
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
    </body>
 </html>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script>
+   (function() {
+      emailjs.init("HqcCmVYY7mnKUPgWS"); // Replace with your actual EmailJS public key
+   })();
+
+   document.addEventListener("DOMContentLoaded", function() {
+      var form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function(event) {
+         event.preventDefault();
+
+         var userEmail = document.getElementById("userEmail").value;
+
+         var templateParams = {
+            user_email: userEmail
+         };
+
+         emailjs.send("service_b8i9m6j", "template_xaf9lfd", templateParams)
+                 .then(function(response) {
+                    alert("Email sent successfully!");
+                 }, function(error) {
+                    alert("There was an error sending the email. Please contact us via email.");
+                 });
+      });
+   });
+</script>
+
+
