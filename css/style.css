@@ -644,22 +644,19 @@ button {
     justify-content: center; /* Horizontally center the content */
     width: 100%;
     background-color: #FFFFFF;
-    color: #42a294;
-    border: none;
-    border-radius: 40px;
+    color: #333;
+    border: 2px solid #333; /* Solid blue border */
     padding: 12px 24px;
-    border-color: #56baae;
     font-size: 28px;
     /*font-weight: bold; !* Make text bold for better visibility *!*/
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 8px #56baae;
 }
 
 .portfolio-button:hover {
 
 
-    background-color: #56baae;
+    background-color: #333;
     color: #FFFFFF; /* Set text color to #333333 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
