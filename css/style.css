@@ -644,7 +644,7 @@ button {
     justify-content: center; /* Horizontally center the content */
     width: 100%;
     background-color: #FFFFFF;
-    color: #333;
+    color: #000000;
     border: 2px solid #333; /* Solid blue border */
     padding: 12px 24px;
     font-size: 28px;
@@ -656,10 +656,9 @@ button {
 .portfolio-button:hover {
 
 
-    background-color: #333;
+    background-color: #000000;
     color: #FFFFFF; /* Set text color to #333333 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transform: translateY(-3px);
 }
 
 .portfolio-button:active {
