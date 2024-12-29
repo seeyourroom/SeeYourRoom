@@ -266,7 +266,6 @@ button {
 }
 
 .logo {
-    display: flex;
     align-items: center;
     width: auto; /* Adjust as needed */
 }
@@ -279,7 +278,8 @@ button {
 }
 
 .logo img {
-    max-height: 30px; /* Adjust based on your logo size */
+    max-height: 100px; /* Adjust based on your logo size */
+    /*min-height: 50px; !* Adjust based on your logo size *!*/
     margin-right: 10px; /* Add spacing between the logo and the text */
 }
 
