@@ -21,10 +21,10 @@ const galleryElement = document.getElementById('gallery');
 galleryImages.forEach(image => {
     const galleryImgWrapper = document.createElement('div');
     galleryImgWrapper.classList.add('gallery-img-w');
-    galleryImgWrapper.setAttribute('data-full', `images/portfolio_full/full/${image.id}.jpg`);
+    galleryImgWrapper.setAttribute('data-full', `images/portfolio/full/${image.id}.jpg`);
 
     const galleryImg = document.createElement('img');
-    galleryImg.src = `images/portfolio_full/thumb/${image.id}.jpg`;
+    galleryImg.src = `images/portfolio/thumb/${image.id}.jpg`;
     galleryImg.alt = image.title;
 
     const galleryOverlay = document.createElement('div');
