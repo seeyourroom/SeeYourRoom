@@ -1638,3 +1638,62 @@ input.address_text::placeholder {
     color: #333;
     line-height: 1.6;
 }
+/* Center the navbar items and keep the logo on the left */
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensures the logo stays on the left */
+}
+
+/* Logo positioning */
+.navbar .logo {
+    position: absolute;
+    left: 20px;  /* Adjust this value to control the distance from the left side */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.navbar-nav li {
+    margin: 0 15px;  /* Add some space between menu items */
+}
+
+/* Optional: Remove the container's default padding */
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Logo size */
+.navbar-logo {
+    max-width: 120px;  /* Adjust based on your logo size */
+    height: auto;
+}
+
+/* Responsive behavior: On small screens, the navbar items should be stacked and the logo should stay on the left */
+@media (max-width: 767px) {
+    .navbar-nav {
+        width: 100%;
+        justify-content: flex-start; /* Align items to the left on small screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+    .navbar-nav li {
+        margin: 10px 0; /* Add space between stacked items */
+    }
+    /* Ensure the logo stays on the left */
+    .navbar .logo {
+        position: absolute;
+        left: 20px;
+    }
+    .navbar-collapse {
+        text-align: left; /* Align the collapsed menu to the left */
+    }
+}
