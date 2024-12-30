@@ -1697,3 +1697,13 @@ input.address_text::placeholder {
         text-align: left; /* Align the collapsed menu to the left */
     }
 }
+
+
+.navbar-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional for better visibility */
+}
