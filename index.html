@@ -304,40 +304,10 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 
-<script>
-   (function() {
-      emailjs.init("HqcCmVYY7mnKUPgWS"); // Replace with your actual EmailJS public key
-   })();
 
-   document.addEventListener("DOMContentLoaded", function() {
-      var form = document.getElementById("contactForm");
 
-      form.addEventListener("submit", function(event) {
-         event.preventDefault();
+<script src="js/custom/emailjs.js"></script>
+<script src="js/custom/portfolio.js"></script>
 
-         var userEmail = document.getElementById("userEmail").value;
+<script src="js/custom/googletagmanager.js"></script>
 
-         var templateParams = {
-            user_email: userEmail
-         };
-
-         emailjs.send("service_b8i9m6j", "template_xaf9lfd", templateParams)
-                 .then(function(response) {
-                    alert("Email sent successfully!");
-                 }, function(error) {
-                    alert("There was an error sending the email. Please contact us via email.");
-                 });
-      });
-   });
-</script>
-<script src="portfolio.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TPCE6REMBJ"></script>
-<script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
-
-   gtag('config', 'G-TPCE6REMBJ');
-</script>
