@@ -235,20 +235,10 @@ button {
     background-size: cover; /* Ensures the background covers the entire section */
     background-repeat: no-repeat;
     background-position: center; /* Centers the background image */
-    animation: moveBackground 30s infinite linear; /* Slow movement effect */
+    background-attachment: fixed; /* Fixes the background in place during scrolling */
+    transition: background-position 0.5s ease; /* Smooth transition for background movement */
 }
 
-@keyframes moveBackground {
-    0% {
-        background-position: center;
-    }
-    50% {
-        background-position: top left; /* Moves the background diagonally */
-    }
-    100% {
-        background-position: center;
-    }
-}
 
 @media only screen and (max-width: 767px) {
     .header_section {
