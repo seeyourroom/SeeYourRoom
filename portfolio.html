@@ -1,132 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>SeeYourRoom</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            min-height: 100vh;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+    }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Always 3 images per row */
-            gap: 10px;
-            width: 100%;
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 10px;
-            box-sizing: border-box;
-        }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Always 3 images per row */
+        gap: 0; /* Remove space between images */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        .img-w {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+    .img-w {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+    }
 
-        .img-w img {
-            display: block;
-            width: 100%;
-            height: auto;
-            transition: filter 0.3s ease;
-        }
+    .img-w img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
-        .img-w:hover {
-            transform: scale(1.05);
-        }
+    .img-w:hover {
+        transform: scale(1.05);
+    }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
 
-        .overlay h3 {
-            font-size: 1.5em; /* Increase title size */
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: white; /* Ensure white text */
-        }
+    .overlay h3 {
+        font-size: 1.5em; /* Increase title size */
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: white; /* Ensure white text */
+    }
 
-        .overlay p {
-            font-size: 1.2em; /* Increase details size */
-            color: white; /* Ensure white text */
-        }
+    .overlay p {
+        font-size: 1.2em; /* Increase details size */
+        color: white; /* Ensure white text */
+    }
 
-        .img-w:hover .overlay {
-            opacity: 1; /* Make the overlay fully visible */
-        }
+    .img-w:hover .overlay {
+        opacity: 1; /* Make the overlay fully visible */
+    }
 
-        .img-w img {
-            filter: brightness(0.7); /* Dim the image slightly when hovered */
-        }
+    .img-w img {
+    }
 
-        .img-w:hover img {
-            filter: brightness(0.5); /* Dim further when hovered for focus */
-        }
+    .img-w:hover img {
+        filter: brightness(0.5); /* Dim further when hovered for focus */
+    }
 
-        .img-c.active {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .img-c.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .img-c.active img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 8px;
-        }
+    .img-c.active img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+    }
 
-        .img-c.active::after {
-            content: "Click anywhere to close";
-            color: white;
-            font-size: 1em;
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    </style>
+    .img-c.active::after {
+        content: "Click anywhere to close";
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+</style>
 </head>
 <body>
 <div class="gallery" id="gallery"></div>
