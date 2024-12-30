@@ -400,7 +400,7 @@ button {
 }
 
 /* Button styling */
-.readmore_bt button {
+.get_in_touch button {
     width: 100%;
     padding: 12px 0;
     font-size: 16px;
@@ -414,7 +414,7 @@ button {
 }
 
 /* Hover effect for the button */
-.readmore_bt button:hover {
+.get_in_touch button:hover {
     background-color: #42a294; /* Dark color for hover */
     color: #FFFFFF;
     transform: translateY(-2px); /* Slight lift effect on hover */
