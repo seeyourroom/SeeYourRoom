@@ -14,7 +14,10 @@
    <link rel="stylesheet" href="css/responsive.css">
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-   <link rel="stylesheet" href="css/gallary.css">
+
+   <link rel="stylesheet" href="css/custom/gallery.css">
+   <link rel="stylesheet" href="css/custom/header-menu.css">
+
    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,37 +28,40 @@
 
       <!-- header menu section start -->
       <div class="header_section">
+
          <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-               <div class="logo">
+            <nav class="main-menu-navbar navbar navbar-expand-lg navbar-light fixed-top">
+               <div class="main-menu-logo">
                   <a href="index.html">
-                     <img src="images/logo/logo.png" alt="SeeYourRoom Logo" class="navbar-logo">
+                     <img src="images/logo/logo.png" alt="SeeYourRoom Logo" class="main-menu-navbar-logo">
                   </a>
                </div>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+               <button class="main-menu-navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu-navbarSupportedContent" aria-controls="main-menu-navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="main-menu-navbar-toggler-icon navbar-toggler-icon"></span>
                </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mx-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="#home-section">Home</a>
+               <div class="collapse main-menu-navbar-collapse navbar-collapse" id="main-menu-navbarSupportedContent">
+                  <ul class="main-menu-navbar-nav navbar-nav mx-auto">
+                     <li class="main-menu-nav-item nav-item">
+                        <a class="main-menu-nav-link nav-link" href="#home-section">Home</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#services-section">Services</a>
+                     <li class="main-menu-nav-item nav-item">
+                        <a class="main-menu-nav-link nav-link" href="#services-section">Services</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio-section">Portfolio</a>
+                     <li class="main-menu-nav-item nav-item">
+                        <a class="main-menu-nav-link nav-link" href="#portfolio-section">Portfolio</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#about-section">About</a>
+                     <li class="main-menu-nav-item nav-item">
+                        <a class="main-menu-nav-link nav-link" href="#about-section">About</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#contact-section">Contact</a>
+                     <li class="main-menu-nav-item nav-item">
+                        <a class="main-menu-nav-link nav-link" href="#contact-section">Contact</a>
                      </li>
                   </ul>
                </div>
             </nav>
          </div>
+
+
 
 
 
@@ -311,3 +317,14 @@
 
 <script src="js/custom/googletagmanager.js"></script>
 
+<script>
+   window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.main-menu-navbar');
+      if (window.scrollY > 50) {
+         navbar.classList.add('scrolled');
+      } else {
+         navbar.classList.remove('scrolled');
+      }
+   });
+
+</script>
