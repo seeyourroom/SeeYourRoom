@@ -230,7 +230,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/portfolio/main_logo.jpg);
+    background-image: url(../images/landing.jpg);
     height: 100vh; /* Adjust height to match the full viewport height */
     background-size: cover; /* Ensures the background covers the entire section */
     background-repeat: no-repeat;
