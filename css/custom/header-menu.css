@@ -1,77 +1,102 @@
-.main-menu-navbar {
-    background-color: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 15px 30px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f7fa;
 }
 
-.main-menu-logo a {
+.header-block {
     display: flex;
+    justify-content: space-between; /* Align logo to the left, menu to the center */
     align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.main-menu-navbar-logo {
-    height: 45px;
-    width: auto;
-    transition: transform 0.3s ease;
+.logo-block {
+    flex: 0 1 auto; /* Make sure the logo stays on the left */
 }
 
-.main-menu-navbar-nav .main-menu-nav-item .main-menu-nav-link {
-    color: #333;
-    font-size: 18px;
+.logo-text {
+    font-size: 32px; /* Simpler, modern font size */
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 12px 20px;
+    color: #333;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+    color: #1d72b8; /* Subtle hover effect */
+}
+
+.menu-block {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    justify-content: center; /* Center the menu */
+}
+
+.navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin: 0 20px; /* Spacing between items */
+}
+
+.nav-link {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 12px 0;
+    text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.main-menu-navbar-nav .main-menu-nav-item .main-menu-nav-link:hover {
+.nav-link:hover {
     color: #1d72b8;
-    transform: translateY(-2px);
-    background-color: transparent;
+    transform: translateY(-2px); /* Small lift effect on hover */
 }
 
-.main-menu-navbar-nav .main-menu-nav-item.active .main-menu-nav-link {
+.navbar-nav .active .nav-link {
     color: #1d72b8;
-    font-weight: 700;
+    font-weight: 600;
     border-bottom: 3px solid #1d72b8;
 }
 
-.main-menu-navbar-toggler-icon {
-    background-color: #FFFFFF;
-}
-
+/* Mobile Design */
 @media (max-width: 768px) {
-    .main-menu-navbar-nav {
-        text-align: center;
+    .navbar-nav {
+        flex-direction: column; /* Stack menu items vertically */
         width: 100%;
-        margin-top: 15px;
     }
 
-    .main-menu-navbar-nav .main-menu-nav-item {
-        width: 100%;
-        margin: 0;
+    .nav-item {
+        margin: 10px 0;
     }
 
-    .main-menu-navbar-nav .main-menu-nav-link {
+    .nav-link {
         padding: 15px 0;
-        font-size: 16px;
+        font-size: 18px; /* Slightly larger font for easier readability */
     }
 
-    .main-menu-navbar-logo {
-        height: 40px;
+    .logo-text {
+        font-size: 28px; /* Slightly smaller logo for mobile */
     }
 }
 
-.main-menu-navbar.scrolled {
-    background-color: #f8f9fa;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.main-menu-navbar-logo:hover {
-    transform: scale(1.1);
+/* Scrolled state */
+.main-header.scrolled {
+    background-color: #f8f9fa; /* Slight color change when scrolled */
 }
