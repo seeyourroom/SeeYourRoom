@@ -367,17 +367,17 @@ button {
     text-align: center;
 }
 
-/* Form container */
+
 .contact-form {
-    width: 350px; /* Adjust width as needed */
+    width: 350px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: #fff; /* White text color */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
-    text-align: center; /* Center the contents */
-    backdrop-filter: blur(8px); /* Add a slight blur effect to the background */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    backdrop-filter: blur(8px);
 }
 
 .contact-form input {
@@ -385,45 +385,51 @@ button {
     padding: 12px 20px;
     margin: 12px 0;
     font-size: 16px;
-    color: #333; /* Dark text for the input */
-    background-color: #fff; /* White background for input */
-    border-radius: 8px; /* Rounded corners */
-    border: 1px solid #ddd; /* Light border */
-    box-sizing: border-box; /* Include padding in width */
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
     transition: border-color 0.3s ease;
 }
 
-/* Focus effect for the input */
 .contact-form input:focus {
-    border-color: #fcbf2d; /* Highlight with a gold color */
+    border-color: #fcbf2d;
     outline: none;
 }
 
-/* Button styling */
 .get_in_touch button {
     width: 100%;
     padding: 12px 0;
     font-size: 16px;
     color: #42a294;
-    background-color: #FFFFFF; /* Warm gold color for the button */
+    background-color: #FFFFFF;
     border: none;
-    border-radius: 40px; /* Rounded button */
+    border-radius: 40px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for the button */
 .get_in_touch button:hover {
-    background-color: #42a294; /* Dark color for hover */
+    background-color: #42a294;
     color: #FFFFFF;
-    transform: translateY(-2px); /* Slight lift effect on hover */
+    transform: translateY(-2px);
 }
 
-/* Optional styling for form input placeholder text */
 .contact-form input::placeholder {
-    color: #aaa; /* Light gray placeholder text */
+    color: #aaa;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
