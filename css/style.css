@@ -1552,9 +1552,12 @@ input.address_text::placeholder {
 .contact_block {
     width: 100%;
     float: left;
+    font-size: 40px;
     color: #1f1f1f;
+    font-weight: bold;
     padding-top: 20px;
 }
+
 
 
 /*///creator*/.creator-section {
