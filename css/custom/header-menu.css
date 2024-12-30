@@ -42,6 +42,10 @@ body {
     justify-content: center; /* Center the menu */
 }
 
+.navbar {
+    box-shadow: none;
+}
+
 .navbar-nav {
     list-style-type: none;
     margin: 0;
