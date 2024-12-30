@@ -1285,10 +1285,9 @@ input.address_text::placeholder {
 
 .copyright_text {
     width: 100%;
-    float: left;
-    font-size: 16px;
-    margin-left: 0px;
-    color: #151515;
+    margin: 0;
+    color: #333;
+    font-size: 18px;
     text-align: center;
 }
 
