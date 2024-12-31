@@ -1,5 +1,5 @@
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+var camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('syr-3d-container').appendChild(renderer.domElement);
@@ -13,7 +13,7 @@ var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSid
 var sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 
-camera.position.set(0, 0, 0);
+camera.position.set(150, 20, 0);
 
 var mouseX = 0;
 var mouseY = 0;
