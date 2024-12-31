@@ -326,7 +326,7 @@ button {
     padding: 0;
     width: 100%;
     float: left;
-    background-image: url(../images/360/view.jpg);
+    background-image: url(../images/landing.jpg);
     background-size: cover; /* Ensure the background covers the section */
     background-repeat: no-repeat;
     background-position: center; /* Initial center position */
