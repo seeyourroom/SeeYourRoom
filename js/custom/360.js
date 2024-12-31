@@ -15,11 +15,9 @@ scene.add(sphere);
 
 camera.position.set(0, 0, 0);
 
-var rotationSpeed = 0.002;
-
 function animate() {
     requestAnimationFrame(animate);
-    sphere.rotation.y += rotationSpeed;
+    // sphere.rotation.y += rotationSpeed; // Remove or comment out this line
     renderer.render(scene, camera);
 }
 
