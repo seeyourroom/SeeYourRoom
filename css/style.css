@@ -228,21 +228,13 @@ button {
 /* header section start */
 
 .header_section {
-    width: 100%;
-    float: left;
-    background-image: url(../images/landing.jpg);
-    height: 100vh; /* Adjust height to match the full viewport height */
-    background-size: cover; /* Ensures the background covers the entire section */
-    background-repeat: no-repeat;
-    background-position: center; /* Centers the background image */
-    background-attachment: fixed; /* Fixes the background in place during scrolling */
-    transition: background-position 0.5s ease; /* Smooth transition for background movement */
+
 }
 
 
 @media only screen and (max-width: 767px) {
     .header_section {
-        height: 50vh; /* Adjusts the height for smaller screens */
+        /*height: 50vh; !* Adjusts the height for smaller screens *!*/
         background-size: contain; /* Ensures the background image fits within the section */
     }
     .navbar {
@@ -326,10 +318,42 @@ button {
 /* banner section start */
 
 .banner_section {
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    height: 100vh; /* Full viewport height */
+    background-color: #f9f9f9; /* Optional background color */
+    padding: 0;
     width: 100%;
     float: left;
-    padding: 200px 0px;
+    background-image: url(../images/360/view.jpg);
+    background-size: cover; /* Ensure the background covers the section */
+    background-repeat: no-repeat;
+    background-position: center; /* Initial center position */
+    background-attachment: fixed; /* Fix the background in place */
+    animation: moveAroundView 20s infinite linear; /* Animate the horizontal movement */
 }
+
+@keyframes moveAroundView {
+    0% {
+        background-position: 0% center; /* Start at the left side */
+    }
+    25% {
+        background-position: 25% center; /* Move a quarter of the way */
+    }
+    50% {
+        background-position: 50% center; /* Center of the image */
+    }
+    75% {
+        background-position: 75% center; /* Move three-quarters of the way */
+    }
+    100% {
+        background-position: 100% center; /* End at the right side */
+    }
+}
+
+
+
 
 .banner_taital_main {
     width: 100%;
