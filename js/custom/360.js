@@ -15,9 +15,20 @@ scene.add(sphere);
 
 camera.position.set(0, 0, 0);
 
+var mouseX = 0;
+var mouseY = 0;
+
+document.addEventListener('mousemove', function(event) {
+    mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    mouseY = - (event.clientY / window.innerHeight) * 2 + 1;
+});
+
 function animate() {
     requestAnimationFrame(animate);
-    // sphere.rotation.y += rotationSpeed; // Remove or comment out this line
+
+    camera.rotation.x = mouseY * Math.PI / 4;
+    camera.rotation.y = mouseX * Math.PI / 4;
+
     renderer.render(scene, camera);
 }
 
