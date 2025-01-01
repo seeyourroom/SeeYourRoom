@@ -38,7 +38,7 @@ body {
 .menu-block {
     flex: 1; /* Take remaining space */
     display: flex;
-    justify-content: center; /* Center the menu */
+    justify-content: end; /* Center the menu */
 }
 
 .navbar {
