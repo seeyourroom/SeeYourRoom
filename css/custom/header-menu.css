@@ -25,7 +25,7 @@ body {
 
 .logo-text {
     font-family: 'Montserrat', sans-serif; /* Unique, modern font */
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
     color: #2C3E50; /* Default color for the main text */
@@ -47,6 +47,8 @@ body {
 /* Example of adding color to specific letters */
 .logo-text .highlight {
     color: #1ABC9C; /* Teal color for emphasis */
+    font-size: 35px;
+    font-width: bold;
 }
 
 
