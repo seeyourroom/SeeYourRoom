@@ -1,0 +1,77 @@
+.luxury-services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 60px 10%;
+}
+
+.luxury-service-block {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.luxury-service-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.luxury-service-block img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.luxury-service-content {
+    display: grid;
+    grid-template-rows: 60px 30px 1fr;
+    gap: 16px;
+    padding: 24px 20px;
+}
+
+.luxury-service-content h3 {
+    font-size: 1.8em;
+    margin: 0;
+    color: #111;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.luxury-service-content .price {
+    font-size: 1.4em;
+    color: #007aff;
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.luxury-service-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+}
+
+.luxury-service-content ul li {
+    font-size: 1em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .luxury-services-container {
+        padding: 40px 5%;
+        grid-template-columns: 1fr;
+    }
+}
