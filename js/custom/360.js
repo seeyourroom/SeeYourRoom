@@ -4,11 +4,32 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('syr-3d-container').appendChild(renderer.domElement);
 
+// Create a loading manager
+var loadingManager = new THREE.LoadingManager();
+
+// Create a loader element
+var loaderElement = document.createElement('div');
+loaderElement.innerText = 'Loading...';
+loaderElement.style.position = 'absolute';
+loaderElement.style.top = '50%';
+loaderElement.style.left = '50%';
+loaderElement.style.transform = 'translate(-50%, -50%)';
+loaderElement.style.fontSize = '24px';
+loaderElement.style.color = '#fff';
+loaderElement.style.opacity = '0.8';
+loaderElement.style.display = 'block'; // Initially visible
+document.body.appendChild(loaderElement);
+
+// Set up a texture loader with the loading manager
+var texture = new THREE.TextureLoader(loadingManager).load('../images/360/view.jpg', function() {
+    // This function is called when the texture is fully loaded
+    loaderElement.style.display = 'none'; // Hide the loader when loading is complete
+});
+
+var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
+
 var geometry = new THREE.SphereGeometry(500, 60, 40);
 geometry.scale(-1, 1, 1);
-
-var texture = new THREE.TextureLoader().load('../images/360/view.jpg');
-var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
 
 var sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
@@ -18,7 +39,7 @@ camera.position.set(150, 20, 0);
 var mouseX = 0;
 var mouseY = 0;
 var isMouseDown = false;
-var rotationSpeed = 0.002;
+var rotationSpeed = 0.001;
 
 var interactionHint = document.createElement('div');
 interactionHint.innerText = 'Drag to Rotate';
@@ -67,9 +88,9 @@ document.addEventListener('keydown', function(event) {
     } else if (event.key === 'ArrowRight') {
         mouseX += 0.05;
     } else if (event.key === 'ArrowUp') {
-        mouseY -= 0.05;
+        mouseY -= 0.001;
     } else if (event.key === 'ArrowDown') {
-        mouseY += 0.05;
+        mouseY += 0.001;
     }
 });
 
