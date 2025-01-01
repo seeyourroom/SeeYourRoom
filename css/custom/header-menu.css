@@ -19,7 +19,14 @@ body {
 
 .logo-block {
     flex: 0 1 auto; /* Make sure the logo stays on the left */
+    user-select: none; /* Disable text selection */
+    pointer-events: none; /* Disable mouse interaction */
 }
+
+.logo-block a {
+    pointer-events: auto; /* Allow interaction with the link itself */
+}
+
 /* Link to a unique Google Font (e.g., Montserrat) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
