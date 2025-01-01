@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
@@ -6,11 +5,11 @@ body {
 
 .header-block {
     display: flex;
-    justify-content: space-between; /* Align logo to the left, menu to the center */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     top: 0;
@@ -18,51 +17,46 @@ body {
 }
 
 .logo-block {
-    flex: 0 1 auto; /* Make sure the logo stays on the left */
-    user-select: none; /* Disable text selection */
-    pointer-events: none; /* Disable mouse interaction */
+    flex: 0 1 auto;
+    user-select: none;
+    pointer-events: none;
 }
 
 .logo-block a {
-    pointer-events: auto; /* Allow interaction with the link itself */
+    pointer-events: auto;
 }
 
-/* Link to a unique Google Font (e.g., Montserrat) */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .logo-text {
-    font-family: 'Montserrat', sans-serif; /* Unique, modern font */
+    font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #2C3E50; /* Default color for the main text */
+    color: #2C3E50;
     text-transform: uppercase;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Adding color to certain letters */
 .logo-text span {
-    color: #1ABC9C; /* Highlighted color (teal) */
+    color: #1ABC9C;
 }
 
-/* Hover effect with smooth color transition */
 .logo-text:hover {
-    color: #34495E; /* Slightly lighter greyish-blue for the hover effect */
+    color: #34495E;
 }
 
-/* Example of adding color to specific letters */
 .logo-text .highlight {
-    color: #1ABC9C; /* Teal color for emphasis */
+    color: #1ABC9C;
     font-size: 35px;
     font-width: bold;
 }
 
-
 .menu-block {
-    flex: 1; /* Take remaining space */
+    flex: 1;
     display: flex;
-    justify-content: end; /* Center the menu */
+    justify-content: end;
 }
 
 .navbar {
@@ -78,7 +72,7 @@ body {
 }
 
 .nav-item {
-    margin: 0 20px; /* Spacing between items */
+    margin: 0 20px;
 }
 
 .nav-link {
@@ -93,7 +87,7 @@ body {
 
 .nav-link:hover {
     color: #1d72b8;
-    transform: translateY(-2px); /* Small lift effect on hover */
+    transform: translateY(-2px);
 }
 
 .navbar-nav .active .nav-link {
@@ -102,10 +96,9 @@ body {
     border-bottom: 3px solid #1d72b8;
 }
 
-/* Mobile Design */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column; /* Stack menu items vertically */
+        flex-direction: column;
         width: 100%;
     }
 
@@ -115,15 +108,14 @@ body {
 
     .nav-link {
         padding: 15px 0;
-        font-size: 18px; /* Slightly larger font for easier readability */
+        font-size: 18px;
     }
 
     .logo-text {
-        font-size: 28px; /* Slightly smaller logo for mobile */
+        font-size: 28px;
     }
 }
 
-/* Scrolled state */
 .main-header.scrolled {
-    background-color: #f8f9fa; /* Slight color change when scrolled */
+    background-color: #f8f9fa;
 }
