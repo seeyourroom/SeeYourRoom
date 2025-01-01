@@ -40,18 +40,39 @@
     color: #111;
     font-weight: 600;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
-.luxury-service-content .price {
-    font-size: 1.4em;
-    color: #007aff;
-    margin: 0;
-    font-weight: 500;
+.price-details {
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', sans-serif; /* A sleek, modern font */
+    font-size: 1.4em;
+    color: #2C2C2C; /* Dark gray for luxury feel */
+    gap: 8px;
+    padding: 10px 0;
+    background-color: transparent; /* Minimalist approach with no background color */
 }
+
+.price-label {
+    color: rgb(108 111 127);    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Subtle letter-spacing for sophistication */
+}
+
+.price {
+    font-size: 2em;
+    color: #28A745; /* Emerald green for the price to symbolize the best value */
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out; /* Smooth hover transition for modern feel */
+}
+
+
+
+
 
 .luxury-service-content ul {
     list-style: none;
@@ -59,13 +80,14 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px; /* Increased gap between list items */
     justify-content: flex-start;
 }
 
 .luxury-service-content ul li {
-    font-size: 1em;
-    color: #555;
+    margin-bottom: 1px;
+    font-size: 1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
 }
-
-
