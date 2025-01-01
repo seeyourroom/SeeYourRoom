@@ -13,10 +13,12 @@
     text-align: center;
     z-index: 1;
     color: white;
-    padding: 30px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); /* Added shadow for depth */
+    width: 90%;
+    max-width: 400px;
 }
 
 .syr-3d-form-container h2 {
@@ -36,8 +38,8 @@
 
 .syr-3d-form-container input[type="email"] {
     padding: 12px 20px;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 350px;
     margin-bottom: 20px;
     font-size: 1.2em;
     border: 2px solid #fff;
@@ -70,7 +72,13 @@
     transform: translateY(-3px);
 }
 
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
+    .syr-3d-form-container {
+        padding: 15px;
+        width: 85%;
+    }
+
     .syr-3d-form-container h2 {
         font-size: 2em;
     }
@@ -80,10 +88,32 @@
     }
 
     .syr-3d-form-container input[type="email"] {
-        width: 80%;
+        font-size: 1.1em;
+        width: 100%;
+        max-width: 100%;
     }
 
     .syr-3d-form-container button {
         font-size: 1.2em;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .syr-3d-form-container h2 {
+        font-size: 1.8em;
+    }
+
+    .syr-3d-form-container p {
+        font-size: 0.9em;
+    }
+
+    .syr-3d-form-container input[type="email"] {
+        font-size: 1em;
+    }
+
+    .syr-3d-form-container button {
+        font-size: 1.1em;
+        padding: 10px 25px;
     }
 }
