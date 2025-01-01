@@ -20,20 +20,35 @@ body {
 .logo-block {
     flex: 0 1 auto; /* Make sure the logo stays on the left */
 }
+/* Link to a unique Google Font (e.g., Montserrat) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .logo-text {
-    font-size: 32px; /* Simpler, modern font size */
+    font-family: 'Montserrat', sans-serif; /* Unique, modern font */
+    font-size: 32px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #333;
+    color: #2C3E50; /* Default color for the main text */
     text-transform: uppercase;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.logo-text:hover {
-    color: #1d72b8; /* Subtle hover effect */
+/* Adding color to certain letters */
+.logo-text span {
+    color: #1ABC9C; /* Highlighted color (teal) */
 }
+
+/* Hover effect with smooth color transition */
+.logo-text:hover {
+    color: #34495E; /* Slightly lighter greyish-blue for the hover effect */
+}
+
+/* Example of adding color to specific letters */
+.logo-text .highlight {
+    color: #1ABC9C; /* Teal color for emphasis */
+}
+
 
 .menu-block {
     flex: 1; /* Take remaining space */
