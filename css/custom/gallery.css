@@ -43,7 +43,9 @@
     color: white;
     text-align: center;
     padding: 20px;
+    overflow-y: auto;
     transition: opacity 0.3s ease;
+    box-sizing: border-box;
 }
 
 .gallery-overlay h3 {
@@ -51,11 +53,14 @@
     font-weight: bold;
     margin-bottom: 10px;
     color: #FFFFFF;
+    word-wrap: break-word;
 }
 
 .gallery-overlay p {
     font-size: 1.2em;
     color: #FFFFFF;
+    word-wrap: break-word;
+    margin: 0;
 }
 
 .gallery-img-w:hover .gallery-overlay {
@@ -89,4 +94,20 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .gallery-overlay {
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+
+    .gallery-overlay p {
+        display: none;
+    }
 }
