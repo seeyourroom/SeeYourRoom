@@ -623,8 +623,7 @@ button {
 }
 
 .gallery_section {
-    padding-left: 5px;
-    padding-right: 5px;
+
 }
 
 .gallery_taital {
@@ -1659,7 +1658,7 @@ input.address_text::placeholder {
 /* Center the navbar items and keep the logo on the left */
 .navbar {
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1686,8 +1685,8 @@ input.address_text::placeholder {
 
 /* Optional: Remove the container's default padding */
 .container {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Logo size */
