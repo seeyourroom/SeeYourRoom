@@ -16,6 +16,7 @@ body {
 }
 
 .logo-block {
+    padding-left: 10px;
     flex: 0 1 auto;
     user-select: none;
     pointer-events: none;
@@ -111,7 +112,6 @@ body {
     }
 
     .logo-text {
-        padding-left: 10px;
         font-size: 28px;
     }
 }
