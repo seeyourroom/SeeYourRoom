@@ -5,7 +5,7 @@
 At SeeYourRoom, your privacy is important to us. This Privacy Policy outlines how we collect, use, and protect your personal data in compliance with applicable privacy laws.
 
 1. **Information We Collect**
-   We collect personal information such as your name, email and usage data when you interact with our services or website. We ensure that only relevant data is collected for our services.
+   We collect personal information such as your name, email, and usage data when you interact with our services or website. We ensure that only relevant data is collected for our services.
 
 2. **How We Use Your Information**
    We use your personal information to provide, improve, and personalize our services. We may also use it to communicate with you regarding service updates, promotional offers, and customer support.
