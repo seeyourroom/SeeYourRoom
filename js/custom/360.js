@@ -7,23 +7,23 @@ document.getElementById('syr-3d-container').appendChild(renderer.domElement);
 // Create a loading manager
 var loadingManager = new THREE.LoadingManager();
 
-// Create a loader element
-var loaderElement = document.createElement('div');
-loaderElement.innerText = 'Loading...';
+// Create a loader element with a full-screen preview image
+var loaderElement = document.createElement('img');
+loaderElement.src = '../images/360/pre_view.jpg';
 loaderElement.style.position = 'absolute';
-loaderElement.style.top = '50%';
-loaderElement.style.left = '50%';
-loaderElement.style.transform = 'translate(-50%, -50%)';
-loaderElement.style.fontSize = '24px';
-loaderElement.style.color = '#fff';
-loaderElement.style.opacity = '0.8';
+loaderElement.style.top = '0';
+loaderElement.style.left = '0';
+loaderElement.style.width = '100%';
+loaderElement.style.height = '100%';
+loaderElement.style.objectFit = 'cover';
+loaderElement.style.opacity = '0.9';
 loaderElement.style.display = 'block'; // Initially visible
 document.body.appendChild(loaderElement);
 
 // Set up a texture loader with the loading manager
 var texture = new THREE.TextureLoader(loadingManager).load('../images/360/view.jpg', function() {
-    // This function is called when the texture is fully loaded
-    loaderElement.style.display = 'none'; // Hide the loader when loading is complete
+    // Hide the loader when the texture is fully loaded
+    loaderElement.style.display = 'none';
 });
 
 var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
