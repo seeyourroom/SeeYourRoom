@@ -4,10 +4,8 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('syr-3d-container').appendChild(renderer.domElement);
 
-// Create a loading manager
 var loadingManager = new THREE.LoadingManager();
 
-// Create a loader element with a full-screen preview image
 var loaderElement = document.createElement('img');
 loaderElement.src = '../images/360/pre_view.jpg';
 loaderElement.style.position = 'absolute';
@@ -17,12 +15,10 @@ loaderElement.style.width = '100%';
 loaderElement.style.height = '100%';
 loaderElement.style.objectFit = 'cover';
 loaderElement.style.opacity = '0.9';
-loaderElement.style.display = 'block'; // Initially visible
+loaderElement.style.display = 'block';
 document.body.appendChild(loaderElement);
 
-// Set up a texture loader with the loading manager
 var texture = new THREE.TextureLoader(loadingManager).load('../images/360/view.jpg', function() {
-    // Hide the loader when the texture is fully loaded
     loaderElement.style.display = 'none';
 });
 
