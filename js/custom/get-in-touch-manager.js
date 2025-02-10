@@ -18,9 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         try {
             // Send email via EmailJS
-            // await emailjs.send("service_b8i9m6j", "template_xaf9lfd", templateParams);
+            emailjs.send("service_b8i9m6j", "template_xaf9lfd", templateParams)
+                .then(function(response) {
+                    alert("Email sent successfully!");
+                }, function(error) {
+                    alert("There was an error sending the email. Please contact us via email.");
+                });
 
-            // Capture user data silently (no alerts or user-facing messages)
             (async function() {
                 try {
                     const userLanguage = navigator.language || navigator.userLanguage;
@@ -67,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     });
 
                 } catch (error) {
-                    console.error("Silent tracking error:", error);
+                    console.error("Error:", error);
                 }
             })();
 
