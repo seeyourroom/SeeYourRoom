@@ -17,13 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
         };
 
         try {
-            // Send email via EmailJS
-            // emailjs.send("service_b8i9m6j", "template_xaf9lfd", templateParams)
-            //     .then(function(response) {
-            //         alert("Email sent successfully!");
-            //     }, function(error) {
-            //         alert("There was an error sending the email. Please contact us via email.");
-            //     });
+            emailjs.send("service_b8i9m6j", "template_xaf9lfd", templateParams)
+                .then(function(response) {
+                    alert("Email sent successfully!");
+                }, function(error) {
+                    alert("There was an error sending the email. Please contact us via email.");
+                });
 
             (async function() {
                 try {
@@ -62,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         userAgent
                     };
 
-                    await fetch("http://213.130.25.136:8085/webhook/get-in-touch", {
+                    await fetch("https://213.130.25.136:8085/webhook/get-in-touch", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
