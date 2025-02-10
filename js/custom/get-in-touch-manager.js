@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         latitude: geoData.latitude || "Unknown",
                         longitude: geoData.longitude || "Unknown",
                         timeZone: geoData.timezone || "Unknown",
+                        ipAddress: geoData.ip || "Unknown",
                         deviceType,
                         browser,
                         os,
