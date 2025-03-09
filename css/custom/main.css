@@ -1,93 +1,141 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Contact Section */
 .first-container-rr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 60vh;
-    background: url('https://source.unsplash.com/1600x900/?interior,architecture') no-repeat center center/cover;
+    background-color: #42a294;
     padding: 40px 20px;
-    position: relative;
-}
-
-.first-container-rr::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-.first-contact-container {
-    position: relative;
-    max-width: 400px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
 }
 
 .first-contact-container h2 {
-    font-size: 24px;
-    color: #333;
     margin-bottom: 10px;
 }
 
 .first-contact-container p {
-    font-size: 16px;
-    color: #666;
     margin-bottom: 20px;
 }
 
-.first-contact-container form {
+#contactForm {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.first-contact-container input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    outline: none;
-}
-
-.first-contact-container button {
-    background: #2c3e50;
-    color: #fff;
-    font-size: 16px;
-    padding: 12px;
+#userEmail {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    border-radius: 5px;
 }
 
-.first-contact-container button:hover {
-    background: #1a252f;
+button {
+    background-color: #fff;
+    color: #42a294;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Services Section */
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.services-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Service Blocks */
+.services-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.luxury-service-block {
+    background-color: #fff;
+    width: 48%; /* Two blocks per row */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px; /* Add spacing between rows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.luxury-service-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.luxury-service-content h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.price-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #42a294;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-    .first-contact-container {
-        padding: 20px;
+@media (max-width: 1024px) {
+    .luxury-service-block {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .luxury-service-block {
+        width: 100%; /* Stack services on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-title {
+        font-size: 24px;
     }
 
-    .first-contact-container h2 {
-        font-size: 22px;
+    .luxury-service-content h3 {
+        font-size: 18px;
     }
 
-    .first-contact-container p {
-        font-size: 14px;
-    }
-
-    .first-contact-container input,
-    .first-contact-container button {
-        font-size: 14px;
-        padding: 10px;
+    .price-details {
+        font-size: 16px;
     }
 }
