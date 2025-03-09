@@ -27,6 +27,15 @@
     margin: 0 auto; /* Centers the form */
 }
 
+/* Styling for the text "Get in touch and let's bring your ideas to life!" */
+.get-in-touch-text {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #42a294; /* Same color as the button for visual consistency */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow to make text stand out */
+}
+
 /* Title and form text */
 .contact-container h2 {
     font-size: 36px;
@@ -95,6 +104,11 @@ button:hover {
 
     #userEmail, button {
         width: 90%;
+    }
+
+    .get-in-touch-text {
+        font-size: 24px; /* Adjust font size on smaller screens */
+        margin-bottom: 15px; /* Reduce spacing */
     }
 }
 
