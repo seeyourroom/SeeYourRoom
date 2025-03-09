@@ -1,4 +1,4 @@
-/* Contact Section */
+/* General Styles */
 .contact-section {
     background-color: #42a294;
     color: #fff;
@@ -60,18 +60,17 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Services Section */
 .services-section {
-    padding: 20px 20px; /* Adjusted padding to reduce space */
+    padding: 20px 20px;
     text-align: center;
     background-color: #fff;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns in one row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    margin-top: 0; /* Removed margin-top to reduce space */
+    margin-top: 0;
 }
 
 /* Service Card Styling */
@@ -125,16 +124,26 @@ ul li {
     margin-bottom: 10px;
 }
 
-/* Responsive Design */
+/* Responsive Design for Mobile */
 @media (max-width: 1200px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Show full service details on medium screens */
+    .service-details ul {
+        display: block; /* Make sure it's visible on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr; /* 1 column for smaller screens */
+        grid-template-columns: 1fr;
+    }
+
+    /* Hide service details on small screens (smartphones) */
+    .service-details ul {
+        display: none; /* Hide the list on small screens */
     }
 
     .service-details h3 {
