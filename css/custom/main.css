@@ -1,16 +1,7 @@
-/* General Body Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
-}
-
 /* Contact Section */
 .contact-section {
     background-color: #42a294;
-    padding: 60px 20px;
+    padding: 60px 20px 0; /* Remove bottom padding */
     color: #fff;
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -70,23 +61,16 @@ button:hover {
 
 /* Services Section */
 .services-section {
-    padding: 80px 20px;
+    padding: 20px 20px; /* Adjusted padding to reduce space */
     text-align: center;
     background-color: #fff;
-}
-
-.section-title h2 {
-    font-size: 40px;
-    font-weight: bold;
-    color: #42a294;
-    margin-bottom: 50px;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columns in one row */
     gap: 30px;
-    margin-top: 30px;
+    margin-top: 0; /* Removed margin-top to reduce space */
 }
 
 /* Service Card Styling */
@@ -152,10 +136,6 @@ ul li {
         grid-template-columns: 1fr; /* 1 column for smaller screens */
     }
 
-    .section-title h2 {
-        font-size: 36px;
-    }
-
     .service-details h3 {
         font-size: 22px;
     }
@@ -184,9 +164,5 @@ ul li {
 
     .service-card {
         padding: 20px;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
     }
 }
