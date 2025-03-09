@@ -2,50 +2,37 @@
 .contact-section {
     background-image: url('https://seeyourroom.com/images/portfolio/full/18.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     color: #fff;
     text-align: center;
     padding-top: 80px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
     position: relative;
-    overflow: hidden;
+    background-attachment: fixed; /* Enables the parallax effect */
+    background-repeat: no-repeat;
 }
 
-/* Creating a blur effect and moving the background */
-.contact-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://seeyourroom.com/images/portfolio/full/18.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px); /* Apply the blur effect */
-    animation: moveBackground 30s infinite linear; /* Animate background movement */
-    z-index: -1; /* Make sure it's behind the content */
+/* Styling for the form container */
+.contact-container {
+    position: relative;
+    z-index: 1; /* Ensure the form stays above the background */
+    display: inline-block;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 600px; /* Limits the width of the form */
+    width: 100%;
+    margin: 0 auto; /* Centers the form */
 }
 
-/* Animation to move the background */
-@keyframes moveBackground {
-    0% {
-        background-position: center;
-    }
-    50% {
-        background-position: top right;
-    }
-    100% {
-        background-position: bottom left;
-    }
-}
-
+/* Title and form text */
 .contact-container h2 {
     font-size: 36px;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #fff;
+    color: #42a294; /* Match the button color for consistency */
 }
 
 .contact-container p {
@@ -54,30 +41,29 @@
     line-height: 1.5;
 }
 
+/* Contact form layout */
 #contactForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    position: relative;
 }
 
-/* Blurred circle effect behind the input fields */
+/* Input field and button styles */
 #userEmail, button {
-    background-color: rgba(255, 255, 255, 0.7); /* Light semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent white */
     border-radius: 50px; /* Circular effect */
     padding: 15px 30px;
     font-size: 16px;
     border: none;
-    transition: transform 0.3s, background-color 0.3s;
-    backdrop-filter: blur(10px); /* Apply blur behind the fields */
-    max-width: 400px;
     width: 80%;
+    max-width: 400px;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 /* Input field and button focus/hover effects */
 #userEmail:focus, button:hover {
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 1); /* Solid white when hovered/focused */
     transform: scale(1.05);
 }
 
@@ -93,10 +79,26 @@ button:hover {
     background-color: #2e8b7d;
 }
 
-#userEmail {
-    border-radius: 50px;
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 30px;
+    }
+
+    .contact-container h2 {
+        font-size: 28px;
+    }
+
+    .contact-container p {
+        font-size: 16px;
+    }
+
+    #userEmail, button {
+        width: 90%;
+    }
 }
 
+/* Styling for the services section (kept from previous code) */
 .services-section {
     padding: 20px 20px;
     text-align: center;
@@ -110,7 +112,6 @@ button:hover {
     margin-top: 0;
 }
 
-/* Service Card Styling */
 .service-card {
     background-color: #fff;
     padding: 30px;
