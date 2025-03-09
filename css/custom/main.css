@@ -11,6 +11,7 @@
     position: relative;
     background-attachment: fixed; /* Enables the parallax effect */
     background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.4); /* Darken the background slightly for better contrast */
 }
 
 /* Styling for the form container */
@@ -19,7 +20,7 @@
     z-index: 1; /* Ensure the form stays above the background */
     display: inline-block;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for form with higher opacity */
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     max-width: 600px; /* Limits the width of the form */
@@ -32,8 +33,8 @@
     font-size: 28px;
     margin-bottom: 25px;
     font-weight: bold;
-    color: #42a294; /* Same color as the button for visual consistency */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adding a subtle shadow to make text stand out */
+    color: #1ABC9C; /* Primary color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Stronger shadow for better contrast */
 }
 
 /* Title and form text */
@@ -41,13 +42,15 @@
     font-size: 36px;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #42a294; /* Match the button color for consistency */
+    color: #1ABC9C; /* Primary color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Adding a stronger shadow for contrast */
 }
 
 .contact-container p {
     font-size: 18px;
     margin-bottom: 25px;
     line-height: 1.5;
+    color: #333; /* Dark text for readability */
 }
 
 /* Contact form layout */
@@ -78,14 +81,14 @@
 
 /* Button specific style */
 button {
-    background-color: #42a294;
+    background-color: #1ABC9C; /* Primary color */
     color: #fff;
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #2e8b7d;
+    background-color: #16A085; /* Darker shade for hover */
 }
 
 /* Responsive Design for Mobile */
@@ -107,12 +110,12 @@ button:hover {
     }
 
     .get-in-touch-text {
-        font-size: 24px; /* Adjust font size on smaller screens */
-        margin-bottom: 15px; /* Reduce spacing */
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 }
 
-/* Styling for the services section (kept from previous code) */
+/* Styling for the services section */
 .services-section {
     padding: 20px 20px;
     text-align: center;
@@ -123,7 +126,6 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    margin-top: 0;
 }
 
 .service-card {
@@ -162,7 +164,7 @@ button:hover {
 .price {
     font-size: 24px;
     font-weight: bold;
-    color: #42a294;
+    color: #1ABC9C; /* Primary color */
 }
 
 ul {
@@ -181,11 +183,6 @@ ul li {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    /* Show full service details on medium screens */
-    .service-details ul {
-        display: block; /* Make sure it's visible on medium screens */
-    }
 }
 
 @media (max-width: 768px) {
@@ -193,9 +190,8 @@ ul li {
         grid-template-columns: 1fr;
     }
 
-    /* Hide service details on small screens (smartphones) */
     .service-details ul {
-        display: none; /* Hide the list on small screens */
+        display: none;
     }
 
     .service-details h3 {
