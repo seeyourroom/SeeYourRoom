@@ -1,105 +1,116 @@
-/* General Styles */
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f4f4f4;
 }
 
 /* Contact Section */
-.first-container-rr {
+.contact-section {
     background-color: #42a294;
     padding: 40px 20px;
-    text-align: center;
     color: #fff;
+    text-align: center;
 }
 
-.first-contact-container h2 {
-    margin-bottom: 10px;
+.contact-container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
-.first-contact-container p {
-    margin-bottom: 20px;
+.contact-container p {
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
 #contactForm {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 #userEmail {
     width: 80%;
     max-width: 400px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
+    padding: 12px;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 button {
     background-color: #fff;
     color: #42a294;
+    padding: 12px 25px;
     border: none;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #f0f0f0;
+    background-color: #e0f1ec;
 }
 
 /* Services Section */
-.container {
+.services-section {
+    padding: 50px 20px;
     text-align: center;
-    padding: 40px 20px;
 }
 
-.services-title {
-    font-size: 28px;
-    margin-bottom: 20px;
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-/* Service Blocks */
-.services-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.highlight {
+    color: #42a294;
+}
+
+/* Services Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    margin-top: 30px;
 }
 
-.luxury-service-block {
+/* Service Card Styling */
+.service-card {
     background-color: #fff;
-    width: 48%; /* Two blocks per row */
-    border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-bottom: 20px; /* Add spacing between rows */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.luxury-service-block:hover {
+.service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.luxury-service-content h3 {
-    margin: 15px 0;
+.service-details h3 {
     font-size: 20px;
+    margin-bottom: 12px;
+    color: #333;
 }
 
-.price-details {
+.service-price {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 5px;
-    font-size: 18px;
     margin-bottom: 10px;
 }
 
+.price-label {
+    font-size: 16px;
+    color: #777;
+}
+
 .price {
+    font-size: 18px;
     font-weight: bold;
     color: #42a294;
 }
@@ -107,35 +118,65 @@ button:hover {
 ul {
     list-style-type: none;
     padding: 0;
+    font-size: 14px;
 }
 
 ul li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .luxury-service-block {
-        width: 45%;
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .luxury-service-block {
-        width: 100%; /* Stack services on smaller screens */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .service-details h3 {
+        font-size: 18px;
+    }
+
+    .service-price {
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
-    .services-title {
+    .contact-section {
+        padding: 30px 15px;
+    }
+
+    .contact-container h2 {
         font-size: 24px;
     }
 
-    .luxury-service-content h3 {
-        font-size: 18px;
+    .contact-container p {
+        font-size: 14px;
     }
 
-    .price-details {
+    #userEmail {
+        width: 90%;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .service-details h3 {
         font-size: 16px;
     }
 }
