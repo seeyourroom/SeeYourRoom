@@ -1,10 +1,11 @@
 /* Contact Section */
 .contact-section {
     background-color: #42a294;
-    padding: 60px 20px 0; /* Remove bottom padding */
     color: #fff;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 .contact-container h2 {
