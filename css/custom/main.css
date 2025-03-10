@@ -9,51 +9,26 @@
     padding-bottom: 20px;
     border-bottom: 1px solid #ddd;
     position: relative;
-    background-attachment: fixed; /* Enables the parallax effect */
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.4); /* Darken the background slightly for better contrast */
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Styling for the form container */
 .contact-container {
     position: relative;
-    z-index: 1; /* Ensure the form stays above the background */
+    z-index: 1;
     display: inline-block;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for form with higher opacity */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    max-width: 600px; /* Limits the width of the form */
+    max-width: 600px;
     width: 100%;
-    margin: 0 auto; /* Centers the form */
+    margin: 0 auto;
 }
 
-/* Styling for the text "Get in touch and let's bring your ideas to life!" */
-.get-in-touch-text {
-    font-size: 28px;
-    margin-bottom: 25px;
-    font-weight: bold;
-    color: #1ABC9C; /* Primary color */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Stronger shadow for better contrast */
-}
-
-/* Title and form text */
-.contact-container h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #1ABC9C; /* Primary color */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Adding a stronger shadow for contrast */
-}
-
-.contact-container p {
-    font-size: 18px;
-    margin-bottom: 25px;
-    line-height: 1.5;
-    color: #333; /* Dark text for readability */
-}
-
-/* Contact form layout */
+/* Contact Form Layout */
 #contactForm {
     display: flex;
     flex-direction: column;
@@ -61,10 +36,10 @@
     gap: 15px;
 }
 
-/* Input field and button styles */
+/* Input Field and Button Styles */
 #userEmail, button {
-    background-color: rgba(255, 255, 255, 0.9); /* Light semi-transparent white */
-    border-radius: 50px; /* Circular effect */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
     padding: 15px 30px;
     font-size: 16px;
     border: none;
@@ -73,64 +48,36 @@
     transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Input field and button focus/hover effects */
-#userEmail:focus, button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Solid white when hovered/focused */
-    transform: scale(1.05);
-}
-
-/* Button specific style */
 button {
-    background-color: #1ABC9C; /* Primary color */
+    background-color: #1ABC9C;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #16A085; /* Darker shade for hover */
+    background-color: #16A085;
+    transform: scale(1.05);
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    .contact-container {
-        padding: 30px;
-    }
-
-    .contact-container h2 {
-        font-size: 28px;
-    }
-
-    .contact-container p {
-        font-size: 16px;
-    }
-
-    #userEmail, button {
-        width: 90%;
-    }
-
-    .get-in-touch-text {
-        font-size: 24px;
-        margin-bottom: 15px;
-    }
-}
-
-/* Styling for the services section */
+/* Services Section */
 .services-section {
-    padding: 20px 20px;
+    padding: 20px;
     text-align: center;
     background-color: #fff;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-card {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -138,89 +85,42 @@ button:hover {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-.service-details h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.service-price {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.price-label {
-    font-size: 18px;
-    color: #777;
-    margin-right: 10px;
-}
-
-.price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #1ABC9C; /* Primary color */
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-/* Responsive Design for Mobile */
+/* Responsive Design */
 @media (max-width: 1200px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
     }
 
-    .service-details ul {
-        display: none;
-    }
-
-    .service-details h3 {
-        font-size: 22px;
-    }
-
-    .service-price .price-label {
-        font-size: 16px;
+    .service-card {
+        width: calc(50% - 10px);
+        min-width: 180px;
+        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-section {
-        padding: 40px 15px;
-    }
-
-    .contact-container h2 {
-        font-size: 28px;
-    }
-
-    .contact-container p {
-        font-size: 16px;
-    }
-
-    #userEmail {
-        width: 90%;
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .service-card {
-        padding: 20px;
+        width: 90%;
+        max-width: 300px;
+        padding: 10px;
     }
 }
