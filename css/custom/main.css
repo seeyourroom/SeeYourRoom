@@ -12,8 +12,6 @@
     --transition: all 0.3s ease;
 }
 
-
-
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -106,9 +104,9 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
     gap: 20px;
-    margin-top: 30px; /* Reduced gap between services and contact form */
+    margin-top: 30px;
 }
 
 .service-card {
@@ -210,78 +208,27 @@
     color: white;
 }
 
-/* Improved Responsive Design for all screen sizes */
+/* Responsive Design */
 @media (max-width: 1600px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr); /* 4 cards in a row */
     }
 }
 
 @media (max-width: 1200px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section-title {
-        font-size: 1.8rem;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
     }
 }
 
 @media (max-width: 768px) {
-    .contact-section {
-        padding: 50px 20px;
-    }
-
-    .contact-container {
-        padding: 20px;
-    }
-
-    .section-title {
-        font-size: 1.6rem;
-    }
-
-    .service-details h3 {
-        font-size: 16px;
-    }
-
-    .price {
-        font-size: 22px;
-    }
-
-    .primary-btn {
-        padding: 12px 20px;
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
     }
 }
 
 @media (max-width: 576px) {
-    .contact-container {
-        padding: 20px;
-    }
-
-    #userEmail, .primary-btn {
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-
     .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .price {
-        font-size: 20px;
+        grid-template-columns: 1fr; /* 1 card per row */
     }
 }
