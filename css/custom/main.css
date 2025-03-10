@@ -6,7 +6,6 @@
     --dark-bg: #333;
     --text-color: #555;
     --light-text: #999;
-    --border-radius: 10px;
     --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
@@ -45,7 +44,6 @@
 
 .contact-container {
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 40px;
     width: 100%;
@@ -82,7 +80,6 @@
     width: 100%;
     padding: 15px 20px;
     border: 1px solid #e0e0e0;
-    border-radius: var(--border-radius);
     font-size: 16px;
     color: var(--text-color);
     background-color: #fafafa;
@@ -104,7 +101,6 @@ textarea {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: var(--border-radius);
     padding: 15px 30px;
     font-size: 16px;
     font-weight: 600;
@@ -138,7 +134,6 @@ textarea {
 
 .service-card {
     background-color: white;
-    border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     overflow: hidden;
     transition: var(--transition);
