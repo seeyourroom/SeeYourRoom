@@ -25,7 +25,11 @@
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #e0eaf3, #f9f9f9); /* Smooth gradient */
+    background-image: url('https://seeyourroom.com/images/portfolio/full/10.jpg'), url('https://seeyourroom.com/images/portfolio/full/17.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    animation: backgroundChange 15s infinite alternate;
     padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
@@ -34,13 +38,23 @@
     align-items: center;
 }
 
+/* Keyframes for background image transition */
+@keyframes backgroundChange {
+    0% {
+        background-image: url('https://seeyourroom.com/images/portfolio/full/10.jpg');
+    }
+    100% {
+        background-image: url('https://seeyourroom.com/images/portfolio/full/17.jpg');
+    }
+}
+
 .contact-container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Add slight transparency for contrast */
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 40px;
     width: 100%;
-    max-width: 500px; /* Adjusted width */
+    max-width: 500px;
     text-align: center;
     transition: var(--transition);
 }
