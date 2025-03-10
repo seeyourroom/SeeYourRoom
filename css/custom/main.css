@@ -37,7 +37,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure the section covers full screen */
 }
 
 /* Keyframes for Background Image Transition */
@@ -238,51 +237,24 @@ textarea {
 /* Responsive Design */
 @media (max-width: 1600px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 1200px) {
     .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards in a row */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .contact-section {
-        padding-top: 50px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .contact-container {
-        padding: 20px;
-        max-width: 90%;
-    }
-
     .services-grid {
-        grid-template-columns: 1fr; /* 1 card per row */
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .get-in-touch-text {
-        font-size: 1rem;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 576px) {
-    .primary-btn {
-        padding: 12px 20px;
-    }
-
-    .contact-container {
-        padding: 15px;
-    }
-
     .services-grid {
-        grid-template-columns: 1fr; /* 1 card per row */
+        grid-template-columns: 1fr;
     }
 }
