@@ -1,8 +1,8 @@
 .contact-section {
     background-image: url('https://seeyourroom.com/images/portfolio/full/10.jpg');
     background-color: rgba(0, 0, 0, 0.4);
-    background-size: cover; /* Ensures the image covers the area */
-    background-position: center; /* Aligns the image at the center */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #fff;
@@ -24,26 +24,6 @@
         background-position: center;
     }
 }
-
-@keyframes cloudMorph {
-    0% {
-        border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
-    }
-    25% {
-        border-radius: 45% 55% 50% 60% / 55% 50% 60% 45%;
-    }
-    50% {
-        border-radius: 55% 45% 60% 50% / 50% 55% 45% 60%;
-    }
-    75% {
-        border-radius: 50% 60% 40% 55% / 60% 50% 55% 45%;
-    }
-    100% {
-        border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
-    }
-}
-
-
 
 @keyframes cloudMorph {
     0% {
