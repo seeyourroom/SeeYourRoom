@@ -16,32 +16,39 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px; /* Increased max-width for larger screens */
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--secondary-color);
     text-align: center;
 }
 
+.highlight {
+    color: var(--primary-color);
+}
+
 .section-subtitle {
     font-size: 1.1rem;
     color: var(--light-text);
     text-align: center;
-    margin-bottom: 2rem;
-}
-
-.section-header {
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
 }
 
 /* Contact Section */
@@ -69,12 +76,16 @@ body {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form {
-    margin-top: 25px;
+.get-in-touch-text {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: var(--text-color);
 }
 
-.form-group {
-    margin-bottom: 20px;
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 #userEmail {
@@ -92,7 +103,7 @@ body {
     outline: none;
 }
 
-.btn-primary {
+.primary-btn {
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -105,7 +116,7 @@ body {
     width: 100%;
 }
 
-.btn-primary:hover {
+.primary-btn:hover {
     background-color: #378b7f;
     transform: translateY(-2px);
 }
@@ -118,8 +129,8 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default for desktop/laptop */
+    gap: 25px;
     margin-top: 50px;
 }
 
@@ -151,10 +162,13 @@ body {
 
 .service-details {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .service-details h3 {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--secondary-color);
     margin-bottom: 15px;
     font-weight: 600;
@@ -181,6 +195,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0 0 25px 0;
+    flex-grow: 1;
 }
 
 .service-features li {
@@ -197,7 +212,7 @@ body {
     margin-top: 5px;
 }
 
-.btn-secondary {
+.service-cta, .btn-secondary {
     background-color: transparent;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
@@ -210,26 +225,64 @@ body {
     text-align: center;
     display: block;
     text-decoration: none;
+    margin-top: auto;
 }
 
-.btn-secondary:hover {
+.service-cta:hover, .btn-secondary:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
-/* Responsive Design */
+/* Improved Responsive Design for all screen sizes */
+@media (min-width: 1601px) {
+    /* For extra large screens */
+    .container {
+        max-width: 1600px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1600px) {
+    /* For large desktop screens */
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 @media (max-width: 1200px) {
+    /* For smaller desktop and laptop screens */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    /* For tablets and small laptops */
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
+    /* For larger mobile devices and small tablets */
     .services-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .contact-section {
@@ -243,14 +296,30 @@ body {
     .section-title {
         font-size: 1.8rem;
     }
+
+    .service-details h3 {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+    /* For mobile phones */
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .contact-container {
         padding: 25px 20px;
     }
 
-    #userEmail, .btn-primary {
+    #userEmail, .primary-btn {
         padding: 12px 15px;
         font-size: 14px;
     }
@@ -259,11 +328,35 @@ body {
         padding: 20px;
     }
 
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .services-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    /* For smaller mobile phones */
+    .service-card {
+        max-width: 100%;
+    }
+
+    .service-details h3 {
+        font-size: 16px;
+    }
+
     .price {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
