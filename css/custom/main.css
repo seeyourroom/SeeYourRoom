@@ -187,27 +187,6 @@
     margin-top: 5px;
 }
 
-.service-cta, .btn-secondary {
-    background-color: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 30px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    margin-top: auto;
-}
-
-.service-cta:hover, .btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
 /* Responsive Design */
 @media (max-width: 1600px) {
     .services-grid {
