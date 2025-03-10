@@ -1,20 +1,14 @@
 /* General Styles */
 .contact-section {
-    background-image: url('https://seeyourroom.com/images/portfolio/full/18.jpg');
-    background-size: cover;
-    background-position: center center;
+    background: rgba(0, 0, 0, 0.4) url('https://seeyourroom.com/images/portfolio/full/18.jpg') center center / cover no-repeat fixed;
     color: #fff;
     text-align: center;
-    padding-top: 80px;
-    padding-bottom: 20px;
+    padding: 80px 20px 20px;
     border-bottom: 1px solid #ddd;
     position: relative;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Styling for the form container */
+/* Form Container */
 .contact-container {
     position: relative;
     z-index: 1;
@@ -26,6 +20,14 @@
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
+}
+
+.get-in-touch-text {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Contact Form Layout */
@@ -48,6 +50,7 @@
     transition: transform 0.3s, background-color 0.3s;
 }
 
+/* Button Styles */
 button {
     background-color: #1ABC9C;
     color: #fff;
@@ -75,6 +78,7 @@ button:hover {
     align-items: center;
 }
 
+/* Service Card */
 .service-card {
     background-color: #fff;
     padding: 20px;
@@ -113,7 +117,6 @@ button:hover {
 
 @media (max-width: 480px) {
     .services-grid {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
