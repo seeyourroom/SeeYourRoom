@@ -95,8 +95,8 @@
     transform: translateY(-2px);
 }
 
-/* Services Section */
-.services-section {
+/* Custom Services Section */
+.custom-services-section {
     padding-top: 5px;
     padding-bottom: 20px;
     background-color: var(--light-bg);
