@@ -1,25 +1,56 @@
-/* General Styles */
 .contact-section {
-    background: rgba(0, 0, 0, 0.4) url('https://seeyourroom.com/images/portfolio/full/11.jpg') center center / cover no-repeat fixed;
+    background: rgba(0, 0, 0, 0.4) url('https://seeyourroom.com/images/portfolio/full/14.jpg') center center / cover no-repeat fixed;
     color: #fff;
     text-align: center;
     padding: 80px 20px 20px;
     border-bottom: 1px solid #ddd;
     position: relative;
+    animation: backgroundMovement 10s infinite ease-in-out;
 }
 
-/* Form Container */
+@keyframes backgroundMovement {
+    0% {
+        background-position: center center;
+    }
+    50% {
+        background-position: top left;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes cloudMorph {
+    0% {
+        border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+    }
+    25% {
+        border-radius: 45% 55% 50% 60% / 55% 50% 60% 45%;
+    }
+    50% {
+        border-radius: 55% 45% 60% 50% / 50% 55% 45% 60%;
+    }
+    75% {
+        border-radius: 50% 60% 40% 55% / 60% 50% 55% 45%;
+    }
+    100% {
+        border-radius: 50% 40% 60% 50% / 50% 60% 40% 50%;
+    }
+}
+
 .contact-container {
     position: relative;
     z-index: 1;
     display: inline-block;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
+    animation: cloudMorph 8s infinite ease-in-out;
+    border-radius: 25px;
+    overflow: hidden;
 }
 
 .get-in-touch-text {
@@ -30,7 +61,6 @@
     text-align: center;
 }
 
-/* Contact Form Layout */
 #contactForm {
     display: flex;
     flex-direction: column;
@@ -38,7 +68,6 @@
     gap: 15px;
 }
 
-/* Input Field and Button Styles */
 #userEmail, button {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50px;
@@ -50,7 +79,6 @@
     transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Button Styles */
 button {
     background-color: #1ABC9C;
     color: #fff;
@@ -63,7 +91,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Services Section */
 .services-section {
     padding: 20px;
     text-align: center;
@@ -78,11 +105,9 @@ button:hover {
     align-items: center;
 }
 
-/* Service Card */
 .service-card {
     background-color: #fff;
     padding: 20px;
-    border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
@@ -93,7 +118,6 @@ button:hover {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
