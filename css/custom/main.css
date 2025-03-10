@@ -25,7 +25,7 @@
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+    background: linear-gradient(135deg, #e0eaf3, #f9f9f9); /* Smooth gradient */
     padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
@@ -38,61 +38,83 @@
     background-color: #fff;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    padding: 30px;
+    padding: 40px;
     width: 100%;
-    max-width: 450px;
+    max-width: 500px; /* Adjusted width */
     text-align: center;
     transition: var(--transition);
 }
 
 .contact-container:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .get-in-touch-text {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
     color: var(--text-color);
 }
 
 #contactForm {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px; /* More space between input fields and button */
 }
 
-#userEmail {
+/* Input fields and text areas */
+#userEmail, #message {
     width: 100%;
-    padding: 12px 18px;
+    padding: 15px 20px;
     border: 1px solid #e0e0e0;
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     font-size: 16px;
+    color: var(--text-color);
+    background-color: #fafafa;
     transition: var(--transition);
 }
 
-#userEmail:focus {
+#userEmail:focus, #message:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(66, 162, 148, 0.2);
     outline: none;
 }
 
+/* Textarea Styling */
+textarea {
+    resize: vertical;
+    max-height: 300px;
+}
+
+/* Submit Button */
 .primary-btn {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 30px;
-    padding: 12px 28px;
+    border-radius: var(--border-radius);
+    padding: 15px 30px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
     width: 100%;
+    box-sizing: border-box; /* Ensure button fits container */
 }
 
 .primary-btn:hover {
     background-color: #378b7f;
     transform: translateY(-2px);
+}
+
+.primary-btn:active {
+    transform: translateY(1px);
 }
 
 /* Custom Services Section */
