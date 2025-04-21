@@ -1,12 +1,40 @@
-
-.telegram-btn {
-    background-color: #0088cc;
+.contact_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 }
 
-.whatsapp-btn {
-    background-color: #25D366;
+.contact_button {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    background: #378b7f;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
-.viber-btn {
-    background-color: #7360F2;
+.contact_button[href*="t.me"]:hover {
+    background: #229ED9;
+    color: white;
+}
+
+.contact_button[href*="wa.me"]:hover {
+    background: #25D366;
+    color: white;
+}
+
+.contact_button[href*="viber"]:hover {
+    background: #665CAC;
+    color: white;
+}
+
+.contact_icon {
+    margin-right: 8px;
+    color: white;
 }
